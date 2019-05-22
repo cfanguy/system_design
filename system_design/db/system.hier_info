@@ -1,0 +1,1679 @@
+|system
+Output0 <= assign2_3:11.Output0
+opcode0 => inst10.IN0
+opcode0 => readin_reg:inst1.INST
+Clock => inst9.IN1
+Clock => readin_reg:inst1.Clock
+Clock => assign2_3:inst2.Clock
+Clock => ALU:inst.Clock
+Clock => inst7.IN0
+Clock => inst8.IN0
+field0 => readin_reg:inst1.Address0
+field1 => readin_reg:inst1.Address1
+opcode1 => 21mux:inst3.S
+opcode1 => 21mux:inst4.S
+opcode1 => 21mux:inst5.S
+opcode1 => 21mux:inst6.S
+field2_0 => 21mux:inst3.B
+opcode2 => ALU:inst.Inst0
+opcode2 => inst8.IN1
+opcode3 => ALU:inst.Inst1
+opcode3 => inst7.IN1
+field2_1 => 21mux:inst4.B
+field2_2 => 21mux:inst5.B
+field2_3 => 21mux:inst6.B
+Output1 <= assign2_3:11.Output1
+Output2 <= assign2_3:11.Output2
+Output3 <= assign2_3:11.Output3
+
+
+|system|assign2_3:11
+Output0 <= assign2_2:inst.Q
+Clock => assign2_2:inst.C
+Clock => assign2_2:inst1.C
+Clock => assign2_2:inst2.C
+Clock => assign2_2:inst3.C
+Input0 => assign2_2:inst.D
+Output1 <= assign2_2:inst1.Q
+Input1 => assign2_2:inst1.D
+Output2 <= assign2_2:inst2.Q
+Input2 => assign2_2:inst2.D
+Output3 <= assign2_2:inst3.Q
+Input3 => assign2_2:inst3.D
+
+
+|system|assign2_3:11|assign2_2:inst
+Q <= assign2_1:inst1.Q
+C => inst4.IN0
+C => assign2_1:inst.Clock
+D => assign2_1:inst.D
+-Q <= assign2_1:inst1.NotQ
+empty <= assign2_1:inst.NotQ
+
+
+|system|assign2_3:11|assign2_2:inst|assign2_1:inst1
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst4.IN0
+Clock => inst3.IN0
+D => inst4.IN1
+D => inst.IN0
+NotQ <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|assign2_3:11|assign2_2:inst|assign2_1:inst
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst4.IN0
+Clock => inst3.IN0
+D => inst4.IN1
+D => inst.IN0
+NotQ <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|assign2_3:11|assign2_2:inst1
+Q <= assign2_1:inst1.Q
+C => inst4.IN0
+C => assign2_1:inst.Clock
+D => assign2_1:inst.D
+-Q <= assign2_1:inst1.NotQ
+empty <= assign2_1:inst.NotQ
+
+
+|system|assign2_3:11|assign2_2:inst1|assign2_1:inst1
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst4.IN0
+Clock => inst3.IN0
+D => inst4.IN1
+D => inst.IN0
+NotQ <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|assign2_3:11|assign2_2:inst1|assign2_1:inst
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst4.IN0
+Clock => inst3.IN0
+D => inst4.IN1
+D => inst.IN0
+NotQ <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|assign2_3:11|assign2_2:inst2
+Q <= assign2_1:inst1.Q
+C => inst4.IN0
+C => assign2_1:inst.Clock
+D => assign2_1:inst.D
+-Q <= assign2_1:inst1.NotQ
+empty <= assign2_1:inst.NotQ
+
+
+|system|assign2_3:11|assign2_2:inst2|assign2_1:inst1
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst4.IN0
+Clock => inst3.IN0
+D => inst4.IN1
+D => inst.IN0
+NotQ <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|assign2_3:11|assign2_2:inst2|assign2_1:inst
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst4.IN0
+Clock => inst3.IN0
+D => inst4.IN1
+D => inst.IN0
+NotQ <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|assign2_3:11|assign2_2:inst3
+Q <= assign2_1:inst1.Q
+C => inst4.IN0
+C => assign2_1:inst.Clock
+D => assign2_1:inst.D
+-Q <= assign2_1:inst1.NotQ
+empty <= assign2_1:inst.NotQ
+
+
+|system|assign2_3:11|assign2_2:inst3|assign2_1:inst1
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst4.IN0
+Clock => inst3.IN0
+D => inst4.IN1
+D => inst.IN0
+NotQ <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|assign2_3:11|assign2_2:inst3|assign2_1:inst
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst4.IN0
+Clock => inst3.IN0
+D => inst4.IN1
+D => inst.IN0
+NotQ <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|readin_reg:inst1
+Q0 <= MUX41:MUX_Q0.Q
+Address1 => MUX41:MUX_Q0.S0
+Address1 => dec24:inst8.In1
+Address1 => MUX41:MUX_Q1.S0
+Address1 => MUX41:MUX_Q2.S0
+Address1 => MUX41:MUX_Q3.S0
+INST => inst4.IN0
+INST => inst3.IN0
+INST => inst6.IN0
+INST => inst5.IN0
+Address0 => dec24:inst8.In0
+Address0 => MUX41:MUX_Q0.S1
+Address0 => MUX41:MUX_Q1.S1
+Address0 => MUX41:MUX_Q2.S1
+Address0 => MUX41:MUX_Q3.S1
+Clock => inst4.IN2
+Clock => inst3.IN2
+Clock => inst6.IN2
+Clock => inst5.IN2
+D0 => assign2_3:P_Reg_10.Input0
+D0 => assign2_3:P_Reg_11.Input0
+D0 => assign2_3:P_Reg_00.Input0
+D0 => assign2_3:P_Reg_01.Input0
+D1 => assign2_3:P_Reg_10.Input1
+D1 => assign2_3:P_Reg_11.Input1
+D1 => assign2_3:P_Reg_00.Input1
+D1 => assign2_3:P_Reg_01.Input1
+D2 => assign2_3:P_Reg_10.Input2
+D2 => assign2_3:P_Reg_11.Input2
+D2 => assign2_3:P_Reg_00.Input2
+D2 => assign2_3:P_Reg_01.Input2
+D3 => assign2_3:P_Reg_10.Input3
+D3 => assign2_3:P_Reg_11.Input3
+D3 => assign2_3:P_Reg_00.Input3
+D3 => assign2_3:P_Reg_01.Input3
+Q1 <= MUX41:MUX_Q1.Q
+Q2 <= MUX41:MUX_Q2.Q
+Q3 <= MUX41:MUX_Q3.Q
+
+
+|system|readin_reg:inst1|MUX41:MUX_Q0
+Q <= 6.DB_MAX_OUTPUT_PORT_TYPE
+INH => 7.IN0
+S1 => 8.IN0
+S0 => 10.IN0
+D0 => 2.IN3
+D1 => 3.IN3
+D2 => 4.IN3
+D3 => 5.IN3
+
+
+|system|readin_reg:inst1|assign2_3:P_Reg_10
+Output0 <= assign2_2:inst.Q
+Clock => assign2_2:inst.C
+Clock => assign2_2:inst1.C
+Clock => assign2_2:inst2.C
+Clock => assign2_2:inst3.C
+Input0 => assign2_2:inst.D
+Output1 <= assign2_2:inst1.Q
+Input1 => assign2_2:inst1.D
+Output2 <= assign2_2:inst2.Q
+Input2 => assign2_2:inst2.D
+Output3 <= assign2_2:inst3.Q
+Input3 => assign2_2:inst3.D
+
+
+|system|readin_reg:inst1|assign2_3:P_Reg_10|assign2_2:inst
+Q <= assign2_1:inst1.Q
+C => inst4.IN0
+C => assign2_1:inst.Clock
+D => assign2_1:inst.D
+-Q <= assign2_1:inst1.NotQ
+empty <= assign2_1:inst.NotQ
+
+
+|system|readin_reg:inst1|assign2_3:P_Reg_10|assign2_2:inst|assign2_1:inst1
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst4.IN0
+Clock => inst3.IN0
+D => inst4.IN1
+D => inst.IN0
+NotQ <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|readin_reg:inst1|assign2_3:P_Reg_10|assign2_2:inst|assign2_1:inst
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst4.IN0
+Clock => inst3.IN0
+D => inst4.IN1
+D => inst.IN0
+NotQ <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|readin_reg:inst1|assign2_3:P_Reg_10|assign2_2:inst1
+Q <= assign2_1:inst1.Q
+C => inst4.IN0
+C => assign2_1:inst.Clock
+D => assign2_1:inst.D
+-Q <= assign2_1:inst1.NotQ
+empty <= assign2_1:inst.NotQ
+
+
+|system|readin_reg:inst1|assign2_3:P_Reg_10|assign2_2:inst1|assign2_1:inst1
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst4.IN0
+Clock => inst3.IN0
+D => inst4.IN1
+D => inst.IN0
+NotQ <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|readin_reg:inst1|assign2_3:P_Reg_10|assign2_2:inst1|assign2_1:inst
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst4.IN0
+Clock => inst3.IN0
+D => inst4.IN1
+D => inst.IN0
+NotQ <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|readin_reg:inst1|assign2_3:P_Reg_10|assign2_2:inst2
+Q <= assign2_1:inst1.Q
+C => inst4.IN0
+C => assign2_1:inst.Clock
+D => assign2_1:inst.D
+-Q <= assign2_1:inst1.NotQ
+empty <= assign2_1:inst.NotQ
+
+
+|system|readin_reg:inst1|assign2_3:P_Reg_10|assign2_2:inst2|assign2_1:inst1
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst4.IN0
+Clock => inst3.IN0
+D => inst4.IN1
+D => inst.IN0
+NotQ <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|readin_reg:inst1|assign2_3:P_Reg_10|assign2_2:inst2|assign2_1:inst
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst4.IN0
+Clock => inst3.IN0
+D => inst4.IN1
+D => inst.IN0
+NotQ <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|readin_reg:inst1|assign2_3:P_Reg_10|assign2_2:inst3
+Q <= assign2_1:inst1.Q
+C => inst4.IN0
+C => assign2_1:inst.Clock
+D => assign2_1:inst.D
+-Q <= assign2_1:inst1.NotQ
+empty <= assign2_1:inst.NotQ
+
+
+|system|readin_reg:inst1|assign2_3:P_Reg_10|assign2_2:inst3|assign2_1:inst1
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst4.IN0
+Clock => inst3.IN0
+D => inst4.IN1
+D => inst.IN0
+NotQ <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|readin_reg:inst1|assign2_3:P_Reg_10|assign2_2:inst3|assign2_1:inst
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst4.IN0
+Clock => inst3.IN0
+D => inst4.IN1
+D => inst.IN0
+NotQ <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|readin_reg:inst1|dec24:inst8
+O3 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+In1 => inst.IN0
+In1 => inst4.IN0
+In1 => inst2.IN0
+In0 => inst.IN1
+In0 => inst1.IN1
+In0 => inst5.IN0
+O2 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+O1 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+O0 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|readin_reg:inst1|assign2_3:P_Reg_11
+Output0 <= assign2_2:inst.Q
+Clock => assign2_2:inst.C
+Clock => assign2_2:inst1.C
+Clock => assign2_2:inst2.C
+Clock => assign2_2:inst3.C
+Input0 => assign2_2:inst.D
+Output1 <= assign2_2:inst1.Q
+Input1 => assign2_2:inst1.D
+Output2 <= assign2_2:inst2.Q
+Input2 => assign2_2:inst2.D
+Output3 <= assign2_2:inst3.Q
+Input3 => assign2_2:inst3.D
+
+
+|system|readin_reg:inst1|assign2_3:P_Reg_11|assign2_2:inst
+Q <= assign2_1:inst1.Q
+C => inst4.IN0
+C => assign2_1:inst.Clock
+D => assign2_1:inst.D
+-Q <= assign2_1:inst1.NotQ
+empty <= assign2_1:inst.NotQ
+
+
+|system|readin_reg:inst1|assign2_3:P_Reg_11|assign2_2:inst|assign2_1:inst1
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst4.IN0
+Clock => inst3.IN0
+D => inst4.IN1
+D => inst.IN0
+NotQ <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|readin_reg:inst1|assign2_3:P_Reg_11|assign2_2:inst|assign2_1:inst
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst4.IN0
+Clock => inst3.IN0
+D => inst4.IN1
+D => inst.IN0
+NotQ <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|readin_reg:inst1|assign2_3:P_Reg_11|assign2_2:inst1
+Q <= assign2_1:inst1.Q
+C => inst4.IN0
+C => assign2_1:inst.Clock
+D => assign2_1:inst.D
+-Q <= assign2_1:inst1.NotQ
+empty <= assign2_1:inst.NotQ
+
+
+|system|readin_reg:inst1|assign2_3:P_Reg_11|assign2_2:inst1|assign2_1:inst1
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst4.IN0
+Clock => inst3.IN0
+D => inst4.IN1
+D => inst.IN0
+NotQ <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|readin_reg:inst1|assign2_3:P_Reg_11|assign2_2:inst1|assign2_1:inst
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst4.IN0
+Clock => inst3.IN0
+D => inst4.IN1
+D => inst.IN0
+NotQ <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|readin_reg:inst1|assign2_3:P_Reg_11|assign2_2:inst2
+Q <= assign2_1:inst1.Q
+C => inst4.IN0
+C => assign2_1:inst.Clock
+D => assign2_1:inst.D
+-Q <= assign2_1:inst1.NotQ
+empty <= assign2_1:inst.NotQ
+
+
+|system|readin_reg:inst1|assign2_3:P_Reg_11|assign2_2:inst2|assign2_1:inst1
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst4.IN0
+Clock => inst3.IN0
+D => inst4.IN1
+D => inst.IN0
+NotQ <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|readin_reg:inst1|assign2_3:P_Reg_11|assign2_2:inst2|assign2_1:inst
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst4.IN0
+Clock => inst3.IN0
+D => inst4.IN1
+D => inst.IN0
+NotQ <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|readin_reg:inst1|assign2_3:P_Reg_11|assign2_2:inst3
+Q <= assign2_1:inst1.Q
+C => inst4.IN0
+C => assign2_1:inst.Clock
+D => assign2_1:inst.D
+-Q <= assign2_1:inst1.NotQ
+empty <= assign2_1:inst.NotQ
+
+
+|system|readin_reg:inst1|assign2_3:P_Reg_11|assign2_2:inst3|assign2_1:inst1
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst4.IN0
+Clock => inst3.IN0
+D => inst4.IN1
+D => inst.IN0
+NotQ <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|readin_reg:inst1|assign2_3:P_Reg_11|assign2_2:inst3|assign2_1:inst
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst4.IN0
+Clock => inst3.IN0
+D => inst4.IN1
+D => inst.IN0
+NotQ <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|readin_reg:inst1|assign2_3:P_Reg_00
+Output0 <= assign2_2:inst.Q
+Clock => assign2_2:inst.C
+Clock => assign2_2:inst1.C
+Clock => assign2_2:inst2.C
+Clock => assign2_2:inst3.C
+Input0 => assign2_2:inst.D
+Output1 <= assign2_2:inst1.Q
+Input1 => assign2_2:inst1.D
+Output2 <= assign2_2:inst2.Q
+Input2 => assign2_2:inst2.D
+Output3 <= assign2_2:inst3.Q
+Input3 => assign2_2:inst3.D
+
+
+|system|readin_reg:inst1|assign2_3:P_Reg_00|assign2_2:inst
+Q <= assign2_1:inst1.Q
+C => inst4.IN0
+C => assign2_1:inst.Clock
+D => assign2_1:inst.D
+-Q <= assign2_1:inst1.NotQ
+empty <= assign2_1:inst.NotQ
+
+
+|system|readin_reg:inst1|assign2_3:P_Reg_00|assign2_2:inst|assign2_1:inst1
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst4.IN0
+Clock => inst3.IN0
+D => inst4.IN1
+D => inst.IN0
+NotQ <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|readin_reg:inst1|assign2_3:P_Reg_00|assign2_2:inst|assign2_1:inst
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst4.IN0
+Clock => inst3.IN0
+D => inst4.IN1
+D => inst.IN0
+NotQ <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|readin_reg:inst1|assign2_3:P_Reg_00|assign2_2:inst1
+Q <= assign2_1:inst1.Q
+C => inst4.IN0
+C => assign2_1:inst.Clock
+D => assign2_1:inst.D
+-Q <= assign2_1:inst1.NotQ
+empty <= assign2_1:inst.NotQ
+
+
+|system|readin_reg:inst1|assign2_3:P_Reg_00|assign2_2:inst1|assign2_1:inst1
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst4.IN0
+Clock => inst3.IN0
+D => inst4.IN1
+D => inst.IN0
+NotQ <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|readin_reg:inst1|assign2_3:P_Reg_00|assign2_2:inst1|assign2_1:inst
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst4.IN0
+Clock => inst3.IN0
+D => inst4.IN1
+D => inst.IN0
+NotQ <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|readin_reg:inst1|assign2_3:P_Reg_00|assign2_2:inst2
+Q <= assign2_1:inst1.Q
+C => inst4.IN0
+C => assign2_1:inst.Clock
+D => assign2_1:inst.D
+-Q <= assign2_1:inst1.NotQ
+empty <= assign2_1:inst.NotQ
+
+
+|system|readin_reg:inst1|assign2_3:P_Reg_00|assign2_2:inst2|assign2_1:inst1
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst4.IN0
+Clock => inst3.IN0
+D => inst4.IN1
+D => inst.IN0
+NotQ <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|readin_reg:inst1|assign2_3:P_Reg_00|assign2_2:inst2|assign2_1:inst
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst4.IN0
+Clock => inst3.IN0
+D => inst4.IN1
+D => inst.IN0
+NotQ <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|readin_reg:inst1|assign2_3:P_Reg_00|assign2_2:inst3
+Q <= assign2_1:inst1.Q
+C => inst4.IN0
+C => assign2_1:inst.Clock
+D => assign2_1:inst.D
+-Q <= assign2_1:inst1.NotQ
+empty <= assign2_1:inst.NotQ
+
+
+|system|readin_reg:inst1|assign2_3:P_Reg_00|assign2_2:inst3|assign2_1:inst1
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst4.IN0
+Clock => inst3.IN0
+D => inst4.IN1
+D => inst.IN0
+NotQ <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|readin_reg:inst1|assign2_3:P_Reg_00|assign2_2:inst3|assign2_1:inst
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst4.IN0
+Clock => inst3.IN0
+D => inst4.IN1
+D => inst.IN0
+NotQ <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|readin_reg:inst1|assign2_3:P_Reg_01
+Output0 <= assign2_2:inst.Q
+Clock => assign2_2:inst.C
+Clock => assign2_2:inst1.C
+Clock => assign2_2:inst2.C
+Clock => assign2_2:inst3.C
+Input0 => assign2_2:inst.D
+Output1 <= assign2_2:inst1.Q
+Input1 => assign2_2:inst1.D
+Output2 <= assign2_2:inst2.Q
+Input2 => assign2_2:inst2.D
+Output3 <= assign2_2:inst3.Q
+Input3 => assign2_2:inst3.D
+
+
+|system|readin_reg:inst1|assign2_3:P_Reg_01|assign2_2:inst
+Q <= assign2_1:inst1.Q
+C => inst4.IN0
+C => assign2_1:inst.Clock
+D => assign2_1:inst.D
+-Q <= assign2_1:inst1.NotQ
+empty <= assign2_1:inst.NotQ
+
+
+|system|readin_reg:inst1|assign2_3:P_Reg_01|assign2_2:inst|assign2_1:inst1
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst4.IN0
+Clock => inst3.IN0
+D => inst4.IN1
+D => inst.IN0
+NotQ <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|readin_reg:inst1|assign2_3:P_Reg_01|assign2_2:inst|assign2_1:inst
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst4.IN0
+Clock => inst3.IN0
+D => inst4.IN1
+D => inst.IN0
+NotQ <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|readin_reg:inst1|assign2_3:P_Reg_01|assign2_2:inst1
+Q <= assign2_1:inst1.Q
+C => inst4.IN0
+C => assign2_1:inst.Clock
+D => assign2_1:inst.D
+-Q <= assign2_1:inst1.NotQ
+empty <= assign2_1:inst.NotQ
+
+
+|system|readin_reg:inst1|assign2_3:P_Reg_01|assign2_2:inst1|assign2_1:inst1
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst4.IN0
+Clock => inst3.IN0
+D => inst4.IN1
+D => inst.IN0
+NotQ <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|readin_reg:inst1|assign2_3:P_Reg_01|assign2_2:inst1|assign2_1:inst
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst4.IN0
+Clock => inst3.IN0
+D => inst4.IN1
+D => inst.IN0
+NotQ <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|readin_reg:inst1|assign2_3:P_Reg_01|assign2_2:inst2
+Q <= assign2_1:inst1.Q
+C => inst4.IN0
+C => assign2_1:inst.Clock
+D => assign2_1:inst.D
+-Q <= assign2_1:inst1.NotQ
+empty <= assign2_1:inst.NotQ
+
+
+|system|readin_reg:inst1|assign2_3:P_Reg_01|assign2_2:inst2|assign2_1:inst1
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst4.IN0
+Clock => inst3.IN0
+D => inst4.IN1
+D => inst.IN0
+NotQ <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|readin_reg:inst1|assign2_3:P_Reg_01|assign2_2:inst2|assign2_1:inst
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst4.IN0
+Clock => inst3.IN0
+D => inst4.IN1
+D => inst.IN0
+NotQ <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|readin_reg:inst1|assign2_3:P_Reg_01|assign2_2:inst3
+Q <= assign2_1:inst1.Q
+C => inst4.IN0
+C => assign2_1:inst.Clock
+D => assign2_1:inst.D
+-Q <= assign2_1:inst1.NotQ
+empty <= assign2_1:inst.NotQ
+
+
+|system|readin_reg:inst1|assign2_3:P_Reg_01|assign2_2:inst3|assign2_1:inst1
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst4.IN0
+Clock => inst3.IN0
+D => inst4.IN1
+D => inst.IN0
+NotQ <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|readin_reg:inst1|assign2_3:P_Reg_01|assign2_2:inst3|assign2_1:inst
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst4.IN0
+Clock => inst3.IN0
+D => inst4.IN1
+D => inst.IN0
+NotQ <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|readin_reg:inst1|MUX41:MUX_Q1
+Q <= 6.DB_MAX_OUTPUT_PORT_TYPE
+INH => 7.IN0
+S1 => 8.IN0
+S0 => 10.IN0
+D0 => 2.IN3
+D1 => 3.IN3
+D2 => 4.IN3
+D3 => 5.IN3
+
+
+|system|readin_reg:inst1|MUX41:MUX_Q2
+Q <= 6.DB_MAX_OUTPUT_PORT_TYPE
+INH => 7.IN0
+S1 => 8.IN0
+S0 => 10.IN0
+D0 => 2.IN3
+D1 => 3.IN3
+D2 => 4.IN3
+D3 => 5.IN3
+
+
+|system|readin_reg:inst1|MUX41:MUX_Q3
+Q <= 6.DB_MAX_OUTPUT_PORT_TYPE
+INH => 7.IN0
+S1 => 8.IN0
+S0 => 10.IN0
+D0 => 2.IN3
+D1 => 3.IN3
+D2 => 4.IN3
+D3 => 5.IN3
+
+
+|system|21mux:inst3
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|system|assign2_3:inst2
+Output0 <= assign2_2:inst.Q
+Clock => assign2_2:inst.C
+Clock => assign2_2:inst1.C
+Clock => assign2_2:inst2.C
+Clock => assign2_2:inst3.C
+Input0 => assign2_2:inst.D
+Output1 <= assign2_2:inst1.Q
+Input1 => assign2_2:inst1.D
+Output2 <= assign2_2:inst2.Q
+Input2 => assign2_2:inst2.D
+Output3 <= assign2_2:inst3.Q
+Input3 => assign2_2:inst3.D
+
+
+|system|assign2_3:inst2|assign2_2:inst
+Q <= assign2_1:inst1.Q
+C => inst4.IN0
+C => assign2_1:inst.Clock
+D => assign2_1:inst.D
+-Q <= assign2_1:inst1.NotQ
+empty <= assign2_1:inst.NotQ
+
+
+|system|assign2_3:inst2|assign2_2:inst|assign2_1:inst1
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst4.IN0
+Clock => inst3.IN0
+D => inst4.IN1
+D => inst.IN0
+NotQ <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|assign2_3:inst2|assign2_2:inst|assign2_1:inst
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst4.IN0
+Clock => inst3.IN0
+D => inst4.IN1
+D => inst.IN0
+NotQ <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|assign2_3:inst2|assign2_2:inst1
+Q <= assign2_1:inst1.Q
+C => inst4.IN0
+C => assign2_1:inst.Clock
+D => assign2_1:inst.D
+-Q <= assign2_1:inst1.NotQ
+empty <= assign2_1:inst.NotQ
+
+
+|system|assign2_3:inst2|assign2_2:inst1|assign2_1:inst1
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst4.IN0
+Clock => inst3.IN0
+D => inst4.IN1
+D => inst.IN0
+NotQ <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|assign2_3:inst2|assign2_2:inst1|assign2_1:inst
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst4.IN0
+Clock => inst3.IN0
+D => inst4.IN1
+D => inst.IN0
+NotQ <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|assign2_3:inst2|assign2_2:inst2
+Q <= assign2_1:inst1.Q
+C => inst4.IN0
+C => assign2_1:inst.Clock
+D => assign2_1:inst.D
+-Q <= assign2_1:inst1.NotQ
+empty <= assign2_1:inst.NotQ
+
+
+|system|assign2_3:inst2|assign2_2:inst2|assign2_1:inst1
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst4.IN0
+Clock => inst3.IN0
+D => inst4.IN1
+D => inst.IN0
+NotQ <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|assign2_3:inst2|assign2_2:inst2|assign2_1:inst
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst4.IN0
+Clock => inst3.IN0
+D => inst4.IN1
+D => inst.IN0
+NotQ <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|assign2_3:inst2|assign2_2:inst3
+Q <= assign2_1:inst1.Q
+C => inst4.IN0
+C => assign2_1:inst.Clock
+D => assign2_1:inst.D
+-Q <= assign2_1:inst1.NotQ
+empty <= assign2_1:inst.NotQ
+
+
+|system|assign2_3:inst2|assign2_2:inst3|assign2_1:inst1
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst4.IN0
+Clock => inst3.IN0
+D => inst4.IN1
+D => inst.IN0
+NotQ <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|assign2_3:inst2|assign2_2:inst3|assign2_1:inst
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst4.IN0
+Clock => inst3.IN0
+D => inst4.IN1
+D => inst.IN0
+NotQ <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|ALU:inst
+Sign <= assign2_3:ALU-Out.Output3
+Clock => assign2_3:ALU-Out.Clock
+Clock => assign2_3:ALU-In_1.Clock
+Clock => assign2_3:ALU-In_2.Clock
+Inst1 => MUX41:In0.S0
+Inst1 => 21mux:mux0.S
+Inst1 => 21mux:mux1.S
+Inst1 => 21mux:mux2.S
+Inst1 => 21mux:mux3.S
+Inst1 => 74283:inst17.CIN
+Inst1 => MUX41:In1.S0
+Inst1 => MUX41:In2.S0
+Inst1 => MUX41:In3.S0
+A3 => assign2_3:ALU-In_1.Input0
+A2 => assign2_3:ALU-In_1.Input1
+A1 => assign2_3:ALU-In_1.Input2
+A0 => assign2_3:ALU-In_1.Input3
+B3 => 21mux:mux0.B
+B3 => -B0.IN0
+B3 => or0.IN0
+B2 => 21mux:mux1.B
+B2 => -B1.IN0
+B2 => or1.IN0
+B1 => 21mux:mux2.B
+B1 => -B2.IN0
+B1 => or2.IN0
+B0 => 21mux:mux3.B
+B0 => -B3.IN0
+B0 => or3.IN0
+Inst0 => MUX41:In0.S1
+Inst0 => MUX41:In1.S1
+Inst0 => MUX41:In2.S1
+Inst0 => MUX41:In3.S1
+OFL <= inst.DB_MAX_OUTPUT_PORT_TYPE
+O3 <= assign2_3:ALU-Out.Output0
+O2 <= assign2_3:ALU-Out.Output1
+O1 <= assign2_3:ALU-Out.Output2
+O0 <= assign2_3:ALU-Out.Output3
+
+
+|system|ALU:inst|assign2_3:ALU-Out
+Output0 <= assign2_2:inst.Q
+Clock => assign2_2:inst.C
+Clock => assign2_2:inst1.C
+Clock => assign2_2:inst2.C
+Clock => assign2_2:inst3.C
+Input0 => assign2_2:inst.D
+Output1 <= assign2_2:inst1.Q
+Input1 => assign2_2:inst1.D
+Output2 <= assign2_2:inst2.Q
+Input2 => assign2_2:inst2.D
+Output3 <= assign2_2:inst3.Q
+Input3 => assign2_2:inst3.D
+
+
+|system|ALU:inst|assign2_3:ALU-Out|assign2_2:inst
+Q <= assign2_1:inst1.Q
+C => inst4.IN0
+C => assign2_1:inst.Clock
+D => assign2_1:inst.D
+-Q <= assign2_1:inst1.NotQ
+empty <= assign2_1:inst.NotQ
+
+
+|system|ALU:inst|assign2_3:ALU-Out|assign2_2:inst|assign2_1:inst1
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst4.IN0
+Clock => inst3.IN0
+D => inst4.IN1
+D => inst.IN0
+NotQ <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|ALU:inst|assign2_3:ALU-Out|assign2_2:inst|assign2_1:inst
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst4.IN0
+Clock => inst3.IN0
+D => inst4.IN1
+D => inst.IN0
+NotQ <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|ALU:inst|assign2_3:ALU-Out|assign2_2:inst1
+Q <= assign2_1:inst1.Q
+C => inst4.IN0
+C => assign2_1:inst.Clock
+D => assign2_1:inst.D
+-Q <= assign2_1:inst1.NotQ
+empty <= assign2_1:inst.NotQ
+
+
+|system|ALU:inst|assign2_3:ALU-Out|assign2_2:inst1|assign2_1:inst1
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst4.IN0
+Clock => inst3.IN0
+D => inst4.IN1
+D => inst.IN0
+NotQ <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|ALU:inst|assign2_3:ALU-Out|assign2_2:inst1|assign2_1:inst
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst4.IN0
+Clock => inst3.IN0
+D => inst4.IN1
+D => inst.IN0
+NotQ <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|ALU:inst|assign2_3:ALU-Out|assign2_2:inst2
+Q <= assign2_1:inst1.Q
+C => inst4.IN0
+C => assign2_1:inst.Clock
+D => assign2_1:inst.D
+-Q <= assign2_1:inst1.NotQ
+empty <= assign2_1:inst.NotQ
+
+
+|system|ALU:inst|assign2_3:ALU-Out|assign2_2:inst2|assign2_1:inst1
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst4.IN0
+Clock => inst3.IN0
+D => inst4.IN1
+D => inst.IN0
+NotQ <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|ALU:inst|assign2_3:ALU-Out|assign2_2:inst2|assign2_1:inst
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst4.IN0
+Clock => inst3.IN0
+D => inst4.IN1
+D => inst.IN0
+NotQ <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|ALU:inst|assign2_3:ALU-Out|assign2_2:inst3
+Q <= assign2_1:inst1.Q
+C => inst4.IN0
+C => assign2_1:inst.Clock
+D => assign2_1:inst.D
+-Q <= assign2_1:inst1.NotQ
+empty <= assign2_1:inst.NotQ
+
+
+|system|ALU:inst|assign2_3:ALU-Out|assign2_2:inst3|assign2_1:inst1
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst4.IN0
+Clock => inst3.IN0
+D => inst4.IN1
+D => inst.IN0
+NotQ <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|ALU:inst|assign2_3:ALU-Out|assign2_2:inst3|assign2_1:inst
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst4.IN0
+Clock => inst3.IN0
+D => inst4.IN1
+D => inst.IN0
+NotQ <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|ALU:inst|MUX41:In0
+Q <= 6.DB_MAX_OUTPUT_PORT_TYPE
+INH => 7.IN0
+S1 => 8.IN0
+S0 => 10.IN0
+D0 => 2.IN3
+D1 => 3.IN3
+D2 => 4.IN3
+D3 => 5.IN3
+
+
+|system|ALU:inst|assign2_3:ALU-In_1
+Output0 <= assign2_2:inst.Q
+Clock => assign2_2:inst.C
+Clock => assign2_2:inst1.C
+Clock => assign2_2:inst2.C
+Clock => assign2_2:inst3.C
+Input0 => assign2_2:inst.D
+Output1 <= assign2_2:inst1.Q
+Input1 => assign2_2:inst1.D
+Output2 <= assign2_2:inst2.Q
+Input2 => assign2_2:inst2.D
+Output3 <= assign2_2:inst3.Q
+Input3 => assign2_2:inst3.D
+
+
+|system|ALU:inst|assign2_3:ALU-In_1|assign2_2:inst
+Q <= assign2_1:inst1.Q
+C => inst4.IN0
+C => assign2_1:inst.Clock
+D => assign2_1:inst.D
+-Q <= assign2_1:inst1.NotQ
+empty <= assign2_1:inst.NotQ
+
+
+|system|ALU:inst|assign2_3:ALU-In_1|assign2_2:inst|assign2_1:inst1
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst4.IN0
+Clock => inst3.IN0
+D => inst4.IN1
+D => inst.IN0
+NotQ <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|ALU:inst|assign2_3:ALU-In_1|assign2_2:inst|assign2_1:inst
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst4.IN0
+Clock => inst3.IN0
+D => inst4.IN1
+D => inst.IN0
+NotQ <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|ALU:inst|assign2_3:ALU-In_1|assign2_2:inst1
+Q <= assign2_1:inst1.Q
+C => inst4.IN0
+C => assign2_1:inst.Clock
+D => assign2_1:inst.D
+-Q <= assign2_1:inst1.NotQ
+empty <= assign2_1:inst.NotQ
+
+
+|system|ALU:inst|assign2_3:ALU-In_1|assign2_2:inst1|assign2_1:inst1
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst4.IN0
+Clock => inst3.IN0
+D => inst4.IN1
+D => inst.IN0
+NotQ <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|ALU:inst|assign2_3:ALU-In_1|assign2_2:inst1|assign2_1:inst
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst4.IN0
+Clock => inst3.IN0
+D => inst4.IN1
+D => inst.IN0
+NotQ <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|ALU:inst|assign2_3:ALU-In_1|assign2_2:inst2
+Q <= assign2_1:inst1.Q
+C => inst4.IN0
+C => assign2_1:inst.Clock
+D => assign2_1:inst.D
+-Q <= assign2_1:inst1.NotQ
+empty <= assign2_1:inst.NotQ
+
+
+|system|ALU:inst|assign2_3:ALU-In_1|assign2_2:inst2|assign2_1:inst1
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst4.IN0
+Clock => inst3.IN0
+D => inst4.IN1
+D => inst.IN0
+NotQ <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|ALU:inst|assign2_3:ALU-In_1|assign2_2:inst2|assign2_1:inst
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst4.IN0
+Clock => inst3.IN0
+D => inst4.IN1
+D => inst.IN0
+NotQ <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|ALU:inst|assign2_3:ALU-In_1|assign2_2:inst3
+Q <= assign2_1:inst1.Q
+C => inst4.IN0
+C => assign2_1:inst.Clock
+D => assign2_1:inst.D
+-Q <= assign2_1:inst1.NotQ
+empty <= assign2_1:inst.NotQ
+
+
+|system|ALU:inst|assign2_3:ALU-In_1|assign2_2:inst3|assign2_1:inst1
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst4.IN0
+Clock => inst3.IN0
+D => inst4.IN1
+D => inst.IN0
+NotQ <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|ALU:inst|assign2_3:ALU-In_1|assign2_2:inst3|assign2_1:inst
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst4.IN0
+Clock => inst3.IN0
+D => inst4.IN1
+D => inst.IN0
+NotQ <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|ALU:inst|assign2_3:ALU-In_2
+Output0 <= assign2_2:inst.Q
+Clock => assign2_2:inst.C
+Clock => assign2_2:inst1.C
+Clock => assign2_2:inst2.C
+Clock => assign2_2:inst3.C
+Input0 => assign2_2:inst.D
+Output1 <= assign2_2:inst1.Q
+Input1 => assign2_2:inst1.D
+Output2 <= assign2_2:inst2.Q
+Input2 => assign2_2:inst2.D
+Output3 <= assign2_2:inst3.Q
+Input3 => assign2_2:inst3.D
+
+
+|system|ALU:inst|assign2_3:ALU-In_2|assign2_2:inst
+Q <= assign2_1:inst1.Q
+C => inst4.IN0
+C => assign2_1:inst.Clock
+D => assign2_1:inst.D
+-Q <= assign2_1:inst1.NotQ
+empty <= assign2_1:inst.NotQ
+
+
+|system|ALU:inst|assign2_3:ALU-In_2|assign2_2:inst|assign2_1:inst1
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst4.IN0
+Clock => inst3.IN0
+D => inst4.IN1
+D => inst.IN0
+NotQ <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|ALU:inst|assign2_3:ALU-In_2|assign2_2:inst|assign2_1:inst
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst4.IN0
+Clock => inst3.IN0
+D => inst4.IN1
+D => inst.IN0
+NotQ <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|ALU:inst|assign2_3:ALU-In_2|assign2_2:inst1
+Q <= assign2_1:inst1.Q
+C => inst4.IN0
+C => assign2_1:inst.Clock
+D => assign2_1:inst.D
+-Q <= assign2_1:inst1.NotQ
+empty <= assign2_1:inst.NotQ
+
+
+|system|ALU:inst|assign2_3:ALU-In_2|assign2_2:inst1|assign2_1:inst1
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst4.IN0
+Clock => inst3.IN0
+D => inst4.IN1
+D => inst.IN0
+NotQ <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|ALU:inst|assign2_3:ALU-In_2|assign2_2:inst1|assign2_1:inst
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst4.IN0
+Clock => inst3.IN0
+D => inst4.IN1
+D => inst.IN0
+NotQ <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|ALU:inst|assign2_3:ALU-In_2|assign2_2:inst2
+Q <= assign2_1:inst1.Q
+C => inst4.IN0
+C => assign2_1:inst.Clock
+D => assign2_1:inst.D
+-Q <= assign2_1:inst1.NotQ
+empty <= assign2_1:inst.NotQ
+
+
+|system|ALU:inst|assign2_3:ALU-In_2|assign2_2:inst2|assign2_1:inst1
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst4.IN0
+Clock => inst3.IN0
+D => inst4.IN1
+D => inst.IN0
+NotQ <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|ALU:inst|assign2_3:ALU-In_2|assign2_2:inst2|assign2_1:inst
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst4.IN0
+Clock => inst3.IN0
+D => inst4.IN1
+D => inst.IN0
+NotQ <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|ALU:inst|assign2_3:ALU-In_2|assign2_2:inst3
+Q <= assign2_1:inst1.Q
+C => inst4.IN0
+C => assign2_1:inst.Clock
+D => assign2_1:inst.D
+-Q <= assign2_1:inst1.NotQ
+empty <= assign2_1:inst.NotQ
+
+
+|system|ALU:inst|assign2_3:ALU-In_2|assign2_2:inst3|assign2_1:inst1
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst4.IN0
+Clock => inst3.IN0
+D => inst4.IN1
+D => inst.IN0
+NotQ <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|ALU:inst|assign2_3:ALU-In_2|assign2_2:inst3|assign2_1:inst
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst4.IN0
+Clock => inst3.IN0
+D => inst4.IN1
+D => inst.IN0
+NotQ <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|ALU:inst|21mux:mux0
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|system|ALU:inst|21mux:mux1
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|system|ALU:inst|21mux:mux2
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|system|ALU:inst|21mux:mux3
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|system|ALU:inst|74283:inst17
+a[1] => f74283:sub.a[1]
+a[2] => f74283:sub.a[2]
+a[3] => f74283:sub.a[3]
+a[4] => f74283:sub.a[4]
+b[1] => f74283:sub.b[1]
+b[2] => f74283:sub.b[2]
+b[3] => f74283:sub.b[3]
+b[4] => f74283:sub.b[4]
+cin => f74283:sub.cin
+cout <= f74283:sub.cout
+sum[1] <= f74283:sub.sum[1]
+sum[2] <= f74283:sub.sum[2]
+sum[3] <= f74283:sub.sum[3]
+sum[4] <= f74283:sub.sum[4]
+
+
+|system|ALU:inst|74283:inst17|f74283:sub
+SUM1 <= 76.DB_MAX_OUTPUT_PORT_TYPE
+CIN => 108.DATAIN
+A1 => 77.IN1
+A1 => 92.IN1
+A1 => 93.IN1
+B1 => 76.IN1
+B1 => 93.IN0
+B1 => 94.IN1
+COUT <= 91.DB_MAX_OUTPUT_PORT_TYPE
+A2 => 95.IN1
+A2 => 97.IN1
+A2 => 79.IN1
+B2 => 97.IN0
+B2 => 96.IN1
+B2 => 78.IN1
+A3 => 98.IN1
+A3 => 100.IN1
+A3 => 81.IN1
+B3 => 100.IN0
+B3 => 99.IN1
+B3 => 80.IN1
+A4 => 101.IN1
+A4 => 103.IN1
+A4 => 83.IN1
+B4 => 103.IN0
+B4 => 102.IN1
+B4 => 82.IN1
+SUM4 <= 82.DB_MAX_OUTPUT_PORT_TYPE
+SUM3 <= 80.DB_MAX_OUTPUT_PORT_TYPE
+SUM2 <= 78.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|ALU:inst|MUX41:In1
+Q <= 6.DB_MAX_OUTPUT_PORT_TYPE
+INH => 7.IN0
+S1 => 8.IN0
+S0 => 10.IN0
+D0 => 2.IN3
+D1 => 3.IN3
+D2 => 4.IN3
+D3 => 5.IN3
+
+
+|system|ALU:inst|MUX41:In2
+Q <= 6.DB_MAX_OUTPUT_PORT_TYPE
+INH => 7.IN0
+S1 => 8.IN0
+S0 => 10.IN0
+D0 => 2.IN3
+D1 => 3.IN3
+D2 => 4.IN3
+D3 => 5.IN3
+
+
+|system|ALU:inst|MUX41:In3
+Q <= 6.DB_MAX_OUTPUT_PORT_TYPE
+INH => 7.IN0
+S1 => 8.IN0
+S0 => 10.IN0
+D0 => 2.IN3
+D1 => 3.IN3
+D2 => 4.IN3
+D3 => 5.IN3
+
+
+|system|assign2_3:10
+Output0 <= assign2_2:inst.Q
+Clock => assign2_2:inst.C
+Clock => assign2_2:inst1.C
+Clock => assign2_2:inst2.C
+Clock => assign2_2:inst3.C
+Input0 => assign2_2:inst.D
+Output1 <= assign2_2:inst1.Q
+Input1 => assign2_2:inst1.D
+Output2 <= assign2_2:inst2.Q
+Input2 => assign2_2:inst2.D
+Output3 <= assign2_2:inst3.Q
+Input3 => assign2_2:inst3.D
+
+
+|system|assign2_3:10|assign2_2:inst
+Q <= assign2_1:inst1.Q
+C => inst4.IN0
+C => assign2_1:inst.Clock
+D => assign2_1:inst.D
+-Q <= assign2_1:inst1.NotQ
+empty <= assign2_1:inst.NotQ
+
+
+|system|assign2_3:10|assign2_2:inst|assign2_1:inst1
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst4.IN0
+Clock => inst3.IN0
+D => inst4.IN1
+D => inst.IN0
+NotQ <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|assign2_3:10|assign2_2:inst|assign2_1:inst
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst4.IN0
+Clock => inst3.IN0
+D => inst4.IN1
+D => inst.IN0
+NotQ <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|assign2_3:10|assign2_2:inst1
+Q <= assign2_1:inst1.Q
+C => inst4.IN0
+C => assign2_1:inst.Clock
+D => assign2_1:inst.D
+-Q <= assign2_1:inst1.NotQ
+empty <= assign2_1:inst.NotQ
+
+
+|system|assign2_3:10|assign2_2:inst1|assign2_1:inst1
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst4.IN0
+Clock => inst3.IN0
+D => inst4.IN1
+D => inst.IN0
+NotQ <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|assign2_3:10|assign2_2:inst1|assign2_1:inst
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst4.IN0
+Clock => inst3.IN0
+D => inst4.IN1
+D => inst.IN0
+NotQ <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|assign2_3:10|assign2_2:inst2
+Q <= assign2_1:inst1.Q
+C => inst4.IN0
+C => assign2_1:inst.Clock
+D => assign2_1:inst.D
+-Q <= assign2_1:inst1.NotQ
+empty <= assign2_1:inst.NotQ
+
+
+|system|assign2_3:10|assign2_2:inst2|assign2_1:inst1
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst4.IN0
+Clock => inst3.IN0
+D => inst4.IN1
+D => inst.IN0
+NotQ <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|assign2_3:10|assign2_2:inst2|assign2_1:inst
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst4.IN0
+Clock => inst3.IN0
+D => inst4.IN1
+D => inst.IN0
+NotQ <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|assign2_3:10|assign2_2:inst3
+Q <= assign2_1:inst1.Q
+C => inst4.IN0
+C => assign2_1:inst.Clock
+D => assign2_1:inst.D
+-Q <= assign2_1:inst1.NotQ
+empty <= assign2_1:inst.NotQ
+
+
+|system|assign2_3:10|assign2_2:inst3|assign2_1:inst1
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst4.IN0
+Clock => inst3.IN0
+D => inst4.IN1
+D => inst.IN0
+NotQ <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|assign2_3:10|assign2_2:inst3|assign2_1:inst
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst4.IN0
+Clock => inst3.IN0
+D => inst4.IN1
+D => inst.IN0
+NotQ <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|assign2_3:01
+Output0 <= assign2_2:inst.Q
+Clock => assign2_2:inst.C
+Clock => assign2_2:inst1.C
+Clock => assign2_2:inst2.C
+Clock => assign2_2:inst3.C
+Input0 => assign2_2:inst.D
+Output1 <= assign2_2:inst1.Q
+Input1 => assign2_2:inst1.D
+Output2 <= assign2_2:inst2.Q
+Input2 => assign2_2:inst2.D
+Output3 <= assign2_2:inst3.Q
+Input3 => assign2_2:inst3.D
+
+
+|system|assign2_3:01|assign2_2:inst
+Q <= assign2_1:inst1.Q
+C => inst4.IN0
+C => assign2_1:inst.Clock
+D => assign2_1:inst.D
+-Q <= assign2_1:inst1.NotQ
+empty <= assign2_1:inst.NotQ
+
+
+|system|assign2_3:01|assign2_2:inst|assign2_1:inst1
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst4.IN0
+Clock => inst3.IN0
+D => inst4.IN1
+D => inst.IN0
+NotQ <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|assign2_3:01|assign2_2:inst|assign2_1:inst
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst4.IN0
+Clock => inst3.IN0
+D => inst4.IN1
+D => inst.IN0
+NotQ <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|assign2_3:01|assign2_2:inst1
+Q <= assign2_1:inst1.Q
+C => inst4.IN0
+C => assign2_1:inst.Clock
+D => assign2_1:inst.D
+-Q <= assign2_1:inst1.NotQ
+empty <= assign2_1:inst.NotQ
+
+
+|system|assign2_3:01|assign2_2:inst1|assign2_1:inst1
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst4.IN0
+Clock => inst3.IN0
+D => inst4.IN1
+D => inst.IN0
+NotQ <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|assign2_3:01|assign2_2:inst1|assign2_1:inst
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst4.IN0
+Clock => inst3.IN0
+D => inst4.IN1
+D => inst.IN0
+NotQ <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|assign2_3:01|assign2_2:inst2
+Q <= assign2_1:inst1.Q
+C => inst4.IN0
+C => assign2_1:inst.Clock
+D => assign2_1:inst.D
+-Q <= assign2_1:inst1.NotQ
+empty <= assign2_1:inst.NotQ
+
+
+|system|assign2_3:01|assign2_2:inst2|assign2_1:inst1
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst4.IN0
+Clock => inst3.IN0
+D => inst4.IN1
+D => inst.IN0
+NotQ <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|assign2_3:01|assign2_2:inst2|assign2_1:inst
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst4.IN0
+Clock => inst3.IN0
+D => inst4.IN1
+D => inst.IN0
+NotQ <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|assign2_3:01|assign2_2:inst3
+Q <= assign2_1:inst1.Q
+C => inst4.IN0
+C => assign2_1:inst.Clock
+D => assign2_1:inst.D
+-Q <= assign2_1:inst1.NotQ
+empty <= assign2_1:inst.NotQ
+
+
+|system|assign2_3:01|assign2_2:inst3|assign2_1:inst1
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst4.IN0
+Clock => inst3.IN0
+D => inst4.IN1
+D => inst.IN0
+NotQ <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|assign2_3:01|assign2_2:inst3|assign2_1:inst
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst4.IN0
+Clock => inst3.IN0
+D => inst4.IN1
+D => inst.IN0
+NotQ <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|21mux:inst4
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|system|21mux:inst5
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|system|21mux:inst6
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+

@@ -1,0 +1,680 @@
+Classic Timing Analyzer report for system
+Tue May 05 14:17:55 2009
+Quartus II Version 7.1 Build 156 04/30/2007 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Clock Setup: 'Clock'
+  6. tsu
+  7. tco
+  8. tpd
+  9. th
+ 10. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2007 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                                                                                                         ;
++------------------------------+-------+---------------+----------------------------------+----------------------------------------------------------+---------------------------------------------------------------------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time                      ; From                                                     ; To                                                                  ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+----------------------------------+----------------------------------------------------------+---------------------------------------------------------------------+------------+----------+--------------+
+; Worst-case tsu               ; N/A   ; None          ; 11.234 ns                        ; opcode0                                                  ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst|assign2_1:inst1|inst5~20  ; --         ; Clock    ; 0            ;
+; Worst-case tco               ; N/A   ; None          ; 11.554 ns                        ; assign2_3:inst2|assign2_2:inst|assign2_1:inst1|inst5~20  ; Output0                                                             ; Clock      ; --       ; 0            ;
+; Worst-case tpd               ; N/A   ; None          ; 16.085 ns                        ; opcode0                                                  ; Output0                                                             ; --         ; --       ; 0            ;
+; Worst-case th                ; N/A   ; None          ; -0.874 ns                        ; Clock                                                    ; ALU:inst|assign2_3:ALU-In_2|assign2_2:inst1|assign2_1:inst|inst5~55 ; --         ; Clock    ; 0            ;
+; Clock Setup: 'Clock'         ; N/A   ; None          ; 70.22 MHz ( period = 14.240 ns ) ; assign2_3:inst2|assign2_2:inst1|assign2_1:inst1|inst5~20 ; ALU:inst|assign2_3:ALU-In_1|assign2_2:inst2|assign2_1:inst|inst5~8  ; Clock      ; Clock    ; 0            ;
+; Total number of failed paths ;       ;               ;                                  ;                                                          ;                                                                     ;            ;          ; 0            ;
++------------------------------+-------+---------------+----------------------------------+----------------------------------------------------------+---------------------------------------------------------------------+------------+----------+--------------+
+
+
++------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                             ;
++-------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                ; Setting            ; From ; To ; Entity Name ;
++-------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                           ; EP2C5T144C6        ;      ;    ;             ;
+; Timing Models                                         ; Final              ;      ;    ;             ;
+; Default hold multicycle                               ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains             ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                        ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                      ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                 ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements               ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                      ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                  ; Off                ;      ;    ;             ;
+; Number of source nodes to report per destination node ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                 ; 10                 ;      ;    ;             ;
+; Number of paths to report                             ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                          ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                            ; Off                ;      ;    ;             ;
++-------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock           ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'Clock'                                                                                                                                                                                                                                                                               ;
++-------+----------------------------------+----------------------------------------------------------------------+----------------------------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack ; Actual fmax (period)             ; From                                                                 ; To                                                                   ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-------+----------------------------------+----------------------------------------------------------------------+----------------------------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A   ; 70.22 MHz ( period = 14.240 ns ) ; assign2_3:inst2|assign2_2:inst1|assign2_1:inst1|inst5~20             ; ALU:inst|assign2_3:ALU-In_1|assign2_2:inst2|assign2_1:inst|inst5~8   ; Clock      ; Clock    ; None                        ; None                      ; 5.838 ns                ;
+; N/A   ; 76.07 MHz ( period = 13.146 ns ) ; assign2_3:inst2|assign2_2:inst1|assign2_1:inst1|inst5~20             ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst2|assign2_1:inst|inst5~338  ; Clock      ; Clock    ; None                        ; None                      ; 5.882 ns                ;
+; N/A   ; 76.32 MHz ( period = 13.102 ns ) ; assign2_3:inst2|assign2_2:inst|assign2_1:inst1|inst5~20              ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst3|assign2_1:inst|inst5~1364 ; Clock      ; Clock    ; None                        ; None                      ; 5.297 ns                ;
+; N/A   ; 79.99 MHz ( period = 12.502 ns ) ; assign2_3:inst2|assign2_2:inst1|assign2_1:inst1|inst5~20             ; ALU:inst|assign2_3:ALU-In_2|assign2_2:inst2|assign2_1:inst|inst5~55  ; Clock      ; Clock    ; None                        ; None                      ; 5.420 ns                ;
+; N/A   ; 83.68 MHz ( period = 11.950 ns ) ; assign2_3:inst2|assign2_2:inst|assign2_1:inst1|inst5~20              ; ALU:inst|assign2_3:ALU-In_2|assign2_2:inst3|assign2_1:inst|inst5~55  ; Clock      ; Clock    ; None                        ; None                      ; 5.176 ns                ;
+; N/A   ; 84.22 MHz ( period = 11.874 ns ) ; assign2_3:inst2|assign2_2:inst|assign2_1:inst1|inst5~20              ; ALU:inst|assign2_3:ALU-In_1|assign2_2:inst3|assign2_1:inst|inst5~8   ; Clock      ; Clock    ; None                        ; None                      ; 5.035 ns                ;
+; N/A   ; 86.22 MHz ( period = 11.598 ns ) ; assign2_3:inst2|assign2_2:inst3|assign2_1:inst1|inst5~20             ; ALU:inst|assign2_3:ALU-In_2|assign2_2:inst|assign2_1:inst|inst5~55   ; Clock      ; Clock    ; None                        ; None                      ; 4.931 ns                ;
+; N/A   ; 86.37 MHz ( period = 11.578 ns ) ; assign2_3:inst2|assign2_2:inst3|assign2_1:inst1|inst5~20             ; ALU:inst|assign2_3:ALU-In_1|assign2_2:inst|assign2_1:inst|inst5~8    ; Clock      ; Clock    ; None                        ; None                      ; 4.921 ns                ;
+; N/A   ; 86.51 MHz ( period = 11.560 ns ) ; assign2_3:inst2|assign2_2:inst2|assign2_1:inst1|inst5~20             ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst1|assign2_1:inst|inst5~609  ; Clock      ; Clock    ; None                        ; None                      ; 4.981 ns                ;
+; N/A   ; 88.79 MHz ( period = 11.262 ns ) ; ALU:inst|assign2_3:ALU-In_1|assign2_2:inst|assign2_1:inst1|inst5~32  ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst3|assign2_1:inst|inst5~1364 ; Clock      ; Clock    ; None                        ; None                      ; 4.427 ns                ;
+; N/A   ; 92.30 MHz ( period = 10.834 ns ) ; assign2_3:inst2|assign2_2:inst2|assign2_1:inst1|inst5~20             ; ALU:inst|assign2_3:ALU-In_1|assign2_2:inst1|assign2_1:inst|inst5~8   ; Clock      ; Clock    ; None                        ; None                      ; 4.554 ns                ;
+; N/A   ; 94.50 MHz ( period = 10.582 ns ) ; assign2_3:inst2|assign2_2:inst2|assign2_1:inst1|inst5~20             ; ALU:inst|assign2_3:ALU-In_2|assign2_2:inst1|assign2_1:inst|inst5~55  ; Clock      ; Clock    ; None                        ; None                      ; 4.455 ns                ;
+; N/A   ; 95.11 MHz ( period = 10.514 ns ) ; ALU:inst|assign2_3:ALU-In_2|assign2_2:inst|assign2_1:inst1|inst5~27  ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst3|assign2_1:inst|inst5~1364 ; Clock      ; Clock    ; None                        ; None                      ; 4.077 ns                ;
+; N/A   ; 102.38 MHz ( period = 9.768 ns ) ; ALU:inst|assign2_3:ALU-In_1|assign2_2:inst1|assign2_1:inst1|inst5~29 ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst3|assign2_1:inst|inst5~1364 ; Clock      ; Clock    ; None                        ; None                      ; 3.499 ns                ;
+; N/A   ; 104.23 MHz ( period = 9.594 ns ) ; ALU:inst|assign2_3:ALU-In_2|assign2_2:inst1|assign2_1:inst1|inst5~33 ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst3|assign2_1:inst|inst5~1364 ; Clock      ; Clock    ; None                        ; None                      ; 3.528 ns                ;
+; N/A   ; 113.53 MHz ( period = 8.808 ns ) ; ALU:inst|assign2_3:ALU-In_1|assign2_2:inst|assign2_1:inst1|inst5~32  ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst2|assign2_1:inst|inst5~338  ; Clock      ; Clock    ; None                        ; None                      ; 3.777 ns                ;
+; N/A   ; 124.07 MHz ( period = 8.060 ns ) ; ALU:inst|assign2_3:ALU-In_2|assign2_2:inst|assign2_1:inst1|inst5~27  ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst2|assign2_1:inst|inst5~338  ; Clock      ; Clock    ; None                        ; None                      ; 3.427 ns                ;
+; N/A   ; 133.53 MHz ( period = 7.489 ns ) ; assign2_3:inst2|assign2_2:inst3|assign2_1:inst1|inst5~20             ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst|assign2_1:inst1|inst5~20   ; Clock      ; Clock    ; None                        ; None                      ; 6.650 ns                ;
+; N/A   ; 136.72 MHz ( period = 7.314 ns ) ; ALU:inst|assign2_3:ALU-In_1|assign2_2:inst1|assign2_1:inst1|inst5~29 ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst2|assign2_1:inst|inst5~338  ; Clock      ; Clock    ; None                        ; None                      ; 2.849 ns                ;
+; N/A   ; 140.06 MHz ( period = 7.140 ns ) ; ALU:inst|assign2_3:ALU-In_2|assign2_2:inst1|assign2_1:inst1|inst5~33 ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst2|assign2_1:inst|inst5~338  ; Clock      ; Clock    ; None                        ; None                      ; 2.878 ns                ;
+; N/A   ; 147.62 MHz ( period = 6.774 ns ) ; ALU:inst|assign2_3:ALU-In_1|assign2_2:inst3|assign2_1:inst1|inst5~25 ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst3|assign2_1:inst|inst5~1364 ; Clock      ; Clock    ; None                        ; None                      ; 1.974 ns                ;
+; N/A   ; 149.34 MHz ( period = 6.696 ns ) ; ALU:inst|assign2_3:ALU-In_2|assign2_2:inst3|assign2_1:inst1|inst5~22 ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst3|assign2_1:inst|inst5~1364 ; Clock      ; Clock    ; None                        ; None                      ; 1.936 ns                ;
+; N/A   ; 151.47 MHz ( period = 6.602 ns ) ; ALU:inst|assign2_3:ALU-In_1|assign2_2:inst2|assign2_1:inst1|inst5~31 ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst3|assign2_1:inst|inst5~1364 ; Clock      ; Clock    ; None                        ; None                      ; 2.038 ns                ;
+; N/A   ; 164.96 MHz ( period = 6.062 ns ) ; ALU:inst|assign2_3:ALU-In_2|assign2_2:inst2|assign2_1:inst1|inst5~31 ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst3|assign2_1:inst|inst5~1364 ; Clock      ; Clock    ; None                        ; None                      ; 1.765 ns                ;
+; N/A   ; 166.67 MHz ( period = 6.000 ns ) ; ALU:inst|assign2_3:ALU-In_2|assign2_2:inst|assign2_1:inst1|inst5~27  ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst1|assign2_1:inst|inst5~609  ; Clock      ; Clock    ; None                        ; None                      ; 2.235 ns                ;
+; N/A   ; 178.44 MHz ( period = 5.604 ns ) ; ALU:inst|assign2_3:ALU-In_1|assign2_2:inst|assign2_1:inst1|inst5~32  ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst1|assign2_1:inst|inst5~609  ; Clock      ; Clock    ; None                        ; None                      ; 2.013 ns                ;
+; N/A   ; 185.94 MHz ( period = 5.378 ns ) ; ALU:inst|assign2_3:ALU-In_2|assign2_2:inst1|assign2_1:inst1|inst5~33 ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst1|assign2_1:inst|inst5~609  ; Clock      ; Clock    ; None                        ; None                      ; 1.835 ns                ;
+; N/A   ; 190.48 MHz ( period = 5.250 ns ) ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst2|assign2_1:inst|inst5~338  ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst2|assign2_1:inst1|inst5~20  ; Clock      ; Clock    ; None                        ; None                      ; 1.459 ns                ;
+; N/A   ; 202.02 MHz ( period = 4.950 ns ) ; ALU:inst|assign2_3:ALU-In_1|assign2_2:inst1|assign2_1:inst1|inst5~29 ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst1|assign2_1:inst|inst5~609  ; Clock      ; Clock    ; None                        ; None                      ; 1.505 ns                ;
+; N/A   ; 218.63 MHz ( period = 4.574 ns ) ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst3|assign2_1:inst|inst5~1364 ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst3|assign2_1:inst1|inst5~20  ; Clock      ; Clock    ; None                        ; None                      ; 1.415 ns                ;
+; N/A   ; 228.10 MHz ( period = 4.384 ns ) ; ALU:inst|assign2_3:ALU-In_1|assign2_2:inst2|assign2_1:inst1|inst5~31 ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst2|assign2_1:inst|inst5~338  ; Clock      ; Clock    ; None                        ; None                      ; 1.506 ns                ;
+; N/A   ; 229.89 MHz ( period = 4.350 ns ) ; ALU:inst|assign2_3:ALU-In_2|assign2_2:inst2|assign2_1:inst1|inst5~31 ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst2|assign2_1:inst|inst5~338  ; Clock      ; Clock    ; None                        ; None                      ; 1.486 ns                ;
+; N/A   ; 236.97 MHz ( period = 4.220 ns ) ; ALU:inst|assign2_3:ALU-In_1|assign2_2:inst3|assign2_1:inst|inst5~8   ; ALU:inst|assign2_3:ALU-In_1|assign2_2:inst3|assign2_1:inst1|inst5~25 ; Clock      ; Clock    ; None                        ; None                      ; 1.163 ns                ;
+; N/A   ; 238.78 MHz ( period = 4.188 ns ) ; ALU:inst|assign2_3:ALU-In_1|assign2_2:inst|assign2_1:inst|inst5~8    ; ALU:inst|assign2_3:ALU-In_1|assign2_2:inst|assign2_1:inst1|inst5~32  ; Clock      ; Clock    ; None                        ; None                      ; 1.255 ns                ;
+; N/A   ; 269.18 MHz ( period = 3.715 ns ) ; ALU:inst|assign2_3:ALU-In_2|assign2_2:inst|assign2_1:inst1|inst5~27  ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst|assign2_1:inst1|inst5~20   ; Clock      ; Clock    ; None                        ; None                      ; 2.916 ns                ;
+; N/A   ; 287.19 MHz ( period = 3.482 ns ) ; ALU:inst|assign2_3:ALU-In_2|assign2_2:inst|assign2_1:inst|inst5~55   ; ALU:inst|assign2_3:ALU-In_2|assign2_2:inst|assign2_1:inst1|inst5~27  ; Clock      ; Clock    ; None                        ; None                      ; 0.855 ns                ;
+; N/A   ; 288.18 MHz ( period = 3.470 ns ) ; assign2_3:inst2|assign2_2:inst|assign2_1:inst|inst5~20               ; assign2_3:inst2|assign2_2:inst|assign2_1:inst1|inst5~20              ; Clock      ; Clock    ; None                        ; None                      ; 0.727 ns                ;
+; N/A   ; 298.69 MHz ( period = 3.348 ns ) ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst1|assign2_1:inst|inst5~609  ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst1|assign2_1:inst1|inst5~20  ; Clock      ; Clock    ; None                        ; None                      ; 0.697 ns                ;
+; N/A   ; 306.00 MHz ( period = 3.268 ns ) ; ALU:inst|assign2_3:ALU-In_1|assign2_2:inst1|assign2_1:inst|inst5~8   ; ALU:inst|assign2_3:ALU-In_1|assign2_2:inst1|assign2_1:inst1|inst5~29 ; Clock      ; Clock    ; None                        ; None                      ; 0.828 ns                ;
+; N/A   ; 312.79 MHz ( period = 3.197 ns ) ; ALU:inst|assign2_3:ALU-In_1|assign2_2:inst|assign2_1:inst1|inst5~32  ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst|assign2_1:inst1|inst5~20   ; Clock      ; Clock    ; None                        ; None                      ; 2.374 ns                ;
+; N/A   ; 320.31 MHz ( period = 3.122 ns ) ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst2|assign2_1:inst1|inst5~20  ; assign2_3:inst2|assign2_2:inst2|assign2_1:inst|inst5~20              ; Clock      ; Clock    ; None                        ; None                      ; 0.700 ns                ;
+; N/A   ; 321.54 MHz ( period = 3.110 ns ) ; ALU:inst|assign2_3:ALU-In_2|assign2_2:inst1|assign2_1:inst|inst5~55  ; ALU:inst|assign2_3:ALU-In_2|assign2_2:inst1|assign2_1:inst1|inst5~33 ; Clock      ; Clock    ; None                        ; None                      ; 0.679 ns                ;
+; N/A   ; 324.04 MHz ( period = 3.086 ns ) ; ALU:inst|assign2_3:ALU-In_1|assign2_2:inst2|assign2_1:inst|inst5~8   ; ALU:inst|assign2_3:ALU-In_1|assign2_2:inst2|assign2_1:inst1|inst5~31 ; Clock      ; Clock    ; None                        ; None                      ; 0.684 ns                ;
+; N/A   ; 324.89 MHz ( period = 3.078 ns ) ; assign2_3:inst2|assign2_2:inst2|assign2_1:inst|inst5~20              ; assign2_3:inst2|assign2_2:inst2|assign2_1:inst1|inst5~20             ; Clock      ; Clock    ; None                        ; None                      ; 0.716 ns                ;
+; N/A   ; 351.86 MHz ( period = 2.842 ns ) ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst|assign2_1:inst1|inst5~20   ; assign2_3:inst2|assign2_2:inst|assign2_1:inst|inst5~20               ; Clock      ; Clock    ; None                        ; None                      ; 0.724 ns                ;
+; N/A   ; 352.86 MHz ( period = 2.834 ns ) ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst1|assign2_1:inst1|inst5~20  ; assign2_3:inst2|assign2_2:inst1|assign2_1:inst|inst5~20              ; Clock      ; Clock    ; None                        ; None                      ; 0.716 ns                ;
+; N/A   ; 356.13 MHz ( period = 2.808 ns ) ; assign2_3:inst2|assign2_2:inst3|assign2_1:inst|inst5~20              ; assign2_3:inst2|assign2_2:inst3|assign2_1:inst1|inst5~20             ; Clock      ; Clock    ; None                        ; None                      ; 0.541 ns                ;
+; N/A   ; 357.91 MHz ( period = 2.794 ns ) ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst3|assign2_1:inst1|inst5~20  ; assign2_3:inst2|assign2_2:inst3|assign2_1:inst|inst5~20              ; Clock      ; Clock    ; None                        ; None                      ; 0.712 ns                ;
+; N/A   ; 361.79 MHz ( period = 2.764 ns ) ; assign2_3:inst2|assign2_2:inst1|assign2_1:inst|inst5~20              ; assign2_3:inst2|assign2_2:inst1|assign2_1:inst1|inst5~20             ; Clock      ; Clock    ; None                        ; None                      ; 0.556 ns                ;
+; N/A   ; 363.64 MHz ( period = 2.750 ns ) ; ALU:inst|assign2_3:ALU-In_2|assign2_2:inst2|assign2_1:inst|inst5~55  ; ALU:inst|assign2_3:ALU-In_2|assign2_2:inst2|assign2_1:inst1|inst5~31 ; Clock      ; Clock    ; None                        ; None                      ; 0.536 ns                ;
+; N/A   ; 365.76 MHz ( period = 2.734 ns ) ; ALU:inst|assign2_3:ALU-In_2|assign2_2:inst3|assign2_1:inst|inst5~55  ; ALU:inst|assign2_3:ALU-In_2|assign2_2:inst3|assign2_1:inst1|inst5~22 ; Clock      ; Clock    ; None                        ; None                      ; 0.409 ns                ;
++-------+----------------------------------+----------------------------------------------------------------------+----------------------------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; tsu                                                                                                                            ;
++-------+--------------+------------+----------+----------------------------------------------------------------------+----------+
+; Slack ; Required tsu ; Actual tsu ; From     ; To                                                                   ; To Clock ;
++-------+--------------+------------+----------+----------------------------------------------------------------------+----------+
+; N/A   ; None         ; 11.234 ns  ; opcode0  ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst|assign2_1:inst1|inst5~20   ; Clock    ;
+; N/A   ; None         ; 11.101 ns  ; field2_3 ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst|assign2_1:inst1|inst5~20   ; Clock    ;
+; N/A   ; None         ; 11.082 ns  ; opcode0  ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst3|assign2_1:inst|inst5~1364 ; Clock    ;
+; N/A   ; None         ; 10.894 ns  ; opcode0  ; ALU:inst|assign2_3:ALU-In_1|assign2_2:inst2|assign2_1:inst|inst5~8   ; Clock    ;
+; N/A   ; None         ; 10.748 ns  ; field2_1 ; ALU:inst|assign2_3:ALU-In_1|assign2_2:inst2|assign2_1:inst|inst5~8   ; Clock    ;
+; N/A   ; None         ; 10.506 ns  ; opcode0  ; ALU:inst|assign2_3:ALU-In_2|assign2_2:inst3|assign2_1:inst|inst5~55  ; Clock    ;
+; N/A   ; None         ; 10.482 ns  ; opcode0  ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst1|assign2_1:inst|inst5~609  ; Clock    ;
+; N/A   ; None         ; 10.468 ns  ; opcode0  ; ALU:inst|assign2_3:ALU-In_1|assign2_2:inst3|assign2_1:inst|inst5~8   ; Clock    ;
+; N/A   ; None         ; 10.347 ns  ; opcode0  ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst2|assign2_1:inst|inst5~338  ; Clock    ;
+; N/A   ; None         ; 10.201 ns  ; field2_1 ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst2|assign2_1:inst|inst5~338  ; Clock    ;
+; N/A   ; None         ; 10.119 ns  ; opcode0  ; ALU:inst|assign2_3:ALU-In_1|assign2_2:inst1|assign2_1:inst|inst5~8   ; Clock    ;
+; N/A   ; None         ; 10.025 ns  ; opcode0  ; ALU:inst|assign2_3:ALU-In_2|assign2_2:inst2|assign2_1:inst|inst5~55  ; Clock    ;
+; N/A   ; None         ; 9.993 ns   ; opcode0  ; ALU:inst|assign2_3:ALU-In_2|assign2_2:inst1|assign2_1:inst|inst5~55  ; Clock    ;
+; N/A   ; None         ; 9.893 ns   ; field2_0 ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst3|assign2_1:inst|inst5~1364 ; Clock    ;
+; N/A   ; None         ; 9.889 ns   ; field2_2 ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst1|assign2_1:inst|inst5~609  ; Clock    ;
+; N/A   ; None         ; 9.879 ns   ; field2_1 ; ALU:inst|assign2_3:ALU-In_2|assign2_2:inst2|assign2_1:inst|inst5~55  ; Clock    ;
+; N/A   ; None         ; 9.544 ns   ; opcode0  ; ALU:inst|assign2_3:ALU-In_2|assign2_2:inst|assign2_1:inst|inst5~55   ; Clock    ;
+; N/A   ; None         ; 9.534 ns   ; opcode0  ; ALU:inst|assign2_3:ALU-In_1|assign2_2:inst|assign2_1:inst|inst5~8    ; Clock    ;
+; N/A   ; None         ; 9.526 ns   ; field2_2 ; ALU:inst|assign2_3:ALU-In_1|assign2_2:inst1|assign2_1:inst|inst5~8   ; Clock    ;
+; N/A   ; None         ; 9.411 ns   ; field2_3 ; ALU:inst|assign2_3:ALU-In_2|assign2_2:inst|assign2_1:inst|inst5~55   ; Clock    ;
+; N/A   ; None         ; 9.401 ns   ; field2_3 ; ALU:inst|assign2_3:ALU-In_1|assign2_2:inst|assign2_1:inst|inst5~8    ; Clock    ;
+; N/A   ; None         ; 9.400 ns   ; field2_2 ; ALU:inst|assign2_3:ALU-In_2|assign2_2:inst1|assign2_1:inst|inst5~55  ; Clock    ;
+; N/A   ; None         ; 9.317 ns   ; field2_0 ; ALU:inst|assign2_3:ALU-In_2|assign2_2:inst3|assign2_1:inst|inst5~55  ; Clock    ;
+; N/A   ; None         ; 9.279 ns   ; field2_0 ; ALU:inst|assign2_3:ALU-In_1|assign2_2:inst3|assign2_1:inst|inst5~8   ; Clock    ;
+; N/A   ; None         ; 8.504 ns   ; opcode3  ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst3|assign2_1:inst|inst5~1364 ; Clock    ;
+; N/A   ; None         ; 8.052 ns   ; opcode2  ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst|assign2_1:inst1|inst5~20   ; Clock    ;
+; N/A   ; None         ; 7.547 ns   ; Clock    ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst|assign2_1:inst1|inst5~20   ; Clock    ;
+; N/A   ; None         ; 7.509 ns   ; field0   ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst|assign2_1:inst1|inst5~20   ; Clock    ;
+; N/A   ; None         ; 7.496 ns   ; opcode1  ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst|assign2_1:inst1|inst5~20   ; Clock    ;
+; N/A   ; None         ; 7.357 ns   ; field0   ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst3|assign2_1:inst|inst5~1364 ; Clock    ;
+; N/A   ; None         ; 7.334 ns   ; opcode2  ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst3|assign2_1:inst|inst5~1364 ; Clock    ;
+; N/A   ; None         ; 7.277 ns   ; opcode3  ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst2|assign2_1:inst|inst5~338  ; Clock    ;
+; N/A   ; None         ; 7.252 ns   ; Clock    ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst3|assign2_1:inst|inst5~1364 ; Clock    ;
+; N/A   ; None         ; 7.169 ns   ; field0   ; ALU:inst|assign2_3:ALU-In_1|assign2_2:inst2|assign2_1:inst|inst5~8   ; Clock    ;
+; N/A   ; None         ; 7.064 ns   ; Clock    ; ALU:inst|assign2_3:ALU-In_1|assign2_2:inst2|assign2_1:inst|inst5~8   ; Clock    ;
+; N/A   ; None         ; 6.968 ns   ; field1   ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst|assign2_1:inst1|inst5~20   ; Clock    ;
+; N/A   ; None         ; 6.846 ns   ; opcode2  ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst1|assign2_1:inst|inst5~609  ; Clock    ;
+; N/A   ; None         ; 6.830 ns   ; opcode1  ; ALU:inst|assign2_3:ALU-In_1|assign2_2:inst2|assign2_1:inst|inst5~8   ; Clock    ;
+; N/A   ; None         ; 6.781 ns   ; field0   ; ALU:inst|assign2_3:ALU-In_2|assign2_2:inst3|assign2_1:inst|inst5~55  ; Clock    ;
+; N/A   ; None         ; 6.758 ns   ; opcode2  ; ALU:inst|assign2_3:ALU-In_2|assign2_2:inst3|assign2_1:inst|inst5~55  ; Clock    ;
+; N/A   ; None         ; 6.757 ns   ; field0   ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst1|assign2_1:inst|inst5~609  ; Clock    ;
+; N/A   ; None         ; 6.743 ns   ; field0   ; ALU:inst|assign2_3:ALU-In_1|assign2_2:inst3|assign2_1:inst|inst5~8   ; Clock    ;
+; N/A   ; None         ; 6.708 ns   ; opcode3  ; ALU:inst|assign2_3:ALU-In_1|assign2_2:inst2|assign2_1:inst|inst5~8   ; Clock    ;
+; N/A   ; None         ; 6.676 ns   ; Clock    ; ALU:inst|assign2_3:ALU-In_2|assign2_2:inst3|assign2_1:inst|inst5~55  ; Clock    ;
+; N/A   ; None         ; 6.652 ns   ; Clock    ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst1|assign2_1:inst|inst5~609  ; Clock    ;
+; N/A   ; None         ; 6.638 ns   ; Clock    ; ALU:inst|assign2_3:ALU-In_1|assign2_2:inst3|assign2_1:inst|inst5~8   ; Clock    ;
+; N/A   ; None         ; 6.622 ns   ; field0   ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst2|assign2_1:inst|inst5~338  ; Clock    ;
+; N/A   ; None         ; 6.517 ns   ; Clock    ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst2|assign2_1:inst|inst5~338  ; Clock    ;
+; N/A   ; None         ; 6.516 ns   ; opcode1  ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst3|assign2_1:inst|inst5~1364 ; Clock    ;
+; N/A   ; None         ; 6.475 ns   ; opcode3  ; ALU:inst|assign2_3:ALU-In_1|assign2_2:inst|assign2_1:inst|inst5~8    ; Clock    ;
+; N/A   ; None         ; 6.394 ns   ; field0   ; ALU:inst|assign2_3:ALU-In_1|assign2_2:inst1|assign2_1:inst|inst5~8   ; Clock    ;
+; N/A   ; None         ; 6.362 ns   ; opcode2  ; ALU:inst|assign2_3:ALU-In_2|assign2_2:inst|assign2_1:inst|inst5~55   ; Clock    ;
+; N/A   ; None         ; 6.357 ns   ; opcode2  ; ALU:inst|assign2_3:ALU-In_2|assign2_2:inst1|assign2_1:inst|inst5~55  ; Clock    ;
+; N/A   ; None         ; 6.307 ns   ; opcode3  ; ALU:inst|assign2_3:ALU-In_1|assign2_2:inst1|assign2_1:inst|inst5~8   ; Clock    ;
+; N/A   ; None         ; 6.300 ns   ; field0   ; ALU:inst|assign2_3:ALU-In_2|assign2_2:inst2|assign2_1:inst|inst5~55  ; Clock    ;
+; N/A   ; None         ; 6.289 ns   ; Clock    ; ALU:inst|assign2_3:ALU-In_1|assign2_2:inst1|assign2_1:inst|inst5~8   ; Clock    ;
+; N/A   ; None         ; 6.286 ns   ; opcode2  ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst2|assign2_1:inst|inst5~338  ; Clock    ;
+; N/A   ; None         ; 6.283 ns   ; opcode1  ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst2|assign2_1:inst|inst5~338  ; Clock    ;
+; N/A   ; None         ; 6.268 ns   ; field0   ; ALU:inst|assign2_3:ALU-In_2|assign2_2:inst1|assign2_1:inst|inst5~55  ; Clock    ;
+; N/A   ; None         ; 6.195 ns   ; Clock    ; ALU:inst|assign2_3:ALU-In_2|assign2_2:inst2|assign2_1:inst|inst5~55  ; Clock    ;
+; N/A   ; None         ; 6.163 ns   ; Clock    ; ALU:inst|assign2_3:ALU-In_2|assign2_2:inst1|assign2_1:inst|inst5~55  ; Clock    ;
+; N/A   ; None         ; 6.150 ns   ; field1   ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst3|assign2_1:inst|inst5~1364 ; Clock    ;
+; N/A   ; None         ; 6.036 ns   ; opcode3  ; ALU:inst|assign2_3:ALU-In_1|assign2_2:inst3|assign2_1:inst|inst5~8   ; Clock    ;
+; N/A   ; None         ; 5.972 ns   ; opcode3  ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst1|assign2_1:inst|inst5~609  ; Clock    ;
+; N/A   ; None         ; 5.964 ns   ; opcode2  ; ALU:inst|assign2_3:ALU-In_2|assign2_2:inst2|assign2_1:inst|inst5~55  ; Clock    ;
+; N/A   ; None         ; 5.961 ns   ; opcode1  ; ALU:inst|assign2_3:ALU-In_2|assign2_2:inst2|assign2_1:inst|inst5~55  ; Clock    ;
+; N/A   ; None         ; 5.942 ns   ; field1   ; ALU:inst|assign2_3:ALU-In_1|assign2_2:inst2|assign2_1:inst|inst5~8   ; Clock    ;
+; N/A   ; None         ; 5.940 ns   ; opcode1  ; ALU:inst|assign2_3:ALU-In_2|assign2_2:inst3|assign2_1:inst|inst5~55  ; Clock    ;
+; N/A   ; None         ; 5.902 ns   ; opcode1  ; ALU:inst|assign2_3:ALU-In_1|assign2_2:inst3|assign2_1:inst|inst5~8   ; Clock    ;
+; N/A   ; None         ; 5.857 ns   ; Clock    ; ALU:inst|assign2_3:ALU-In_2|assign2_2:inst|assign2_1:inst|inst5~55   ; Clock    ;
+; N/A   ; None         ; 5.847 ns   ; Clock    ; ALU:inst|assign2_3:ALU-In_1|assign2_2:inst|assign2_1:inst|inst5~8    ; Clock    ;
+; N/A   ; None         ; 5.819 ns   ; field0   ; ALU:inst|assign2_3:ALU-In_2|assign2_2:inst|assign2_1:inst|inst5~55   ; Clock    ;
+; N/A   ; None         ; 5.809 ns   ; field0   ; ALU:inst|assign2_3:ALU-In_1|assign2_2:inst|assign2_1:inst|inst5~8    ; Clock    ;
+; N/A   ; None         ; 5.806 ns   ; opcode1  ; ALU:inst|assign2_3:ALU-In_2|assign2_2:inst|assign2_1:inst|inst5~55   ; Clock    ;
+; N/A   ; None         ; 5.796 ns   ; opcode1  ; ALU:inst|assign2_3:ALU-In_1|assign2_2:inst|assign2_1:inst|inst5~8    ; Clock    ;
+; N/A   ; None         ; 5.685 ns   ; opcode3  ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst|assign2_1:inst1|inst5~20   ; Clock    ;
+; N/A   ; None         ; 5.574 ns   ; field1   ; ALU:inst|assign2_3:ALU-In_2|assign2_2:inst3|assign2_1:inst|inst5~55  ; Clock    ;
+; N/A   ; None         ; 5.536 ns   ; field1   ; ALU:inst|assign2_3:ALU-In_1|assign2_2:inst3|assign2_1:inst|inst5~8   ; Clock    ;
+; N/A   ; None         ; 5.523 ns   ; opcode1  ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst1|assign2_1:inst|inst5~609  ; Clock    ;
+; N/A   ; None         ; 5.395 ns   ; field1   ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst2|assign2_1:inst|inst5~338  ; Clock    ;
+; N/A   ; None         ; 5.278 ns   ; field1   ; ALU:inst|assign2_3:ALU-In_2|assign2_2:inst|assign2_1:inst|inst5~55   ; Clock    ;
+; N/A   ; None         ; 5.268 ns   ; field1   ; ALU:inst|assign2_3:ALU-In_1|assign2_2:inst|assign2_1:inst|inst5~8    ; Clock    ;
+; N/A   ; None         ; 5.160 ns   ; opcode1  ; ALU:inst|assign2_3:ALU-In_1|assign2_2:inst1|assign2_1:inst|inst5~8   ; Clock    ;
+; N/A   ; None         ; 5.130 ns   ; field1   ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst1|assign2_1:inst|inst5~609  ; Clock    ;
+; N/A   ; None         ; 5.090 ns   ; opcode3  ; ALU:inst|assign2_3:ALU-In_2|assign2_2:inst|assign2_1:inst|inst5~55   ; Clock    ;
+; N/A   ; None         ; 5.075 ns   ; opcode3  ; ALU:inst|assign2_3:ALU-In_2|assign2_2:inst1|assign2_1:inst|inst5~55  ; Clock    ;
+; N/A   ; None         ; 5.073 ns   ; field1   ; ALU:inst|assign2_3:ALU-In_2|assign2_2:inst2|assign2_1:inst|inst5~55  ; Clock    ;
+; N/A   ; None         ; 5.034 ns   ; opcode1  ; ALU:inst|assign2_3:ALU-In_2|assign2_2:inst1|assign2_1:inst|inst5~55  ; Clock    ;
+; N/A   ; None         ; 4.767 ns   ; field1   ; ALU:inst|assign2_3:ALU-In_1|assign2_2:inst1|assign2_1:inst|inst5~8   ; Clock    ;
+; N/A   ; None         ; 4.686 ns   ; opcode3  ; ALU:inst|assign2_3:ALU-In_2|assign2_2:inst2|assign2_1:inst|inst5~55  ; Clock    ;
+; N/A   ; None         ; 4.641 ns   ; field1   ; ALU:inst|assign2_3:ALU-In_2|assign2_2:inst1|assign2_1:inst|inst5~55  ; Clock    ;
+; N/A   ; None         ; 4.630 ns   ; opcode3  ; ALU:inst|assign2_3:ALU-In_2|assign2_2:inst3|assign2_1:inst|inst5~55  ; Clock    ;
++-------+--------------+------------+----------+----------------------------------------------------------------------+----------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; tco                                                                                                                 ;
++-------+--------------+------------+----------------------------------------------------------+---------+------------+
+; Slack ; Required tco ; Actual tco ; From                                                     ; To      ; From Clock ;
++-------+--------------+------------+----------------------------------------------------------+---------+------------+
+; N/A   ; None         ; 11.554 ns  ; assign2_3:inst2|assign2_2:inst|assign2_1:inst1|inst5~20  ; Output0 ; Clock      ;
+; N/A   ; None         ; 11.041 ns  ; assign2_3:inst2|assign2_2:inst3|assign2_1:inst1|inst5~20 ; Output3 ; Clock      ;
+; N/A   ; None         ; 10.989 ns  ; assign2_3:inst2|assign2_2:inst1|assign2_1:inst1|inst5~20 ; Output1 ; Clock      ;
+; N/A   ; None         ; 10.424 ns  ; assign2_3:inst2|assign2_2:inst2|assign2_1:inst1|inst5~20 ; Output2 ; Clock      ;
++-------+--------------+------------+----------------------------------------------------------+---------+------------+
+
+
++------------------------------------------------------------------+
+; tpd                                                              ;
++-------+-------------------+-----------------+----------+---------+
+; Slack ; Required P2P Time ; Actual P2P Time ; From     ; To      ;
++-------+-------------------+-----------------+----------+---------+
+; N/A   ; None              ; 16.085 ns       ; opcode0  ; Output0 ;
+; N/A   ; None              ; 15.126 ns       ; opcode0  ; Output2 ;
+; N/A   ; None              ; 14.896 ns       ; field2_0 ; Output0 ;
+; N/A   ; None              ; 14.786 ns       ; opcode0  ; Output3 ;
+; N/A   ; None              ; 14.763 ns       ; opcode0  ; Output1 ;
+; N/A   ; None              ; 14.653 ns       ; field2_3 ; Output3 ;
+; N/A   ; None              ; 14.617 ns       ; field2_1 ; Output1 ;
+; N/A   ; None              ; 14.533 ns       ; field2_2 ; Output2 ;
+; N/A   ; None              ; 12.360 ns       ; field0   ; Output0 ;
+; N/A   ; None              ; 12.255 ns       ; Clock    ; Output0 ;
+; N/A   ; None              ; 11.519 ns       ; opcode1  ; Output0 ;
+; N/A   ; None              ; 11.401 ns       ; field0   ; Output2 ;
+; N/A   ; None              ; 11.296 ns       ; Clock    ; Output2 ;
+; N/A   ; None              ; 11.153 ns       ; field1   ; Output0 ;
+; N/A   ; None              ; 11.099 ns       ; Clock    ; Output3 ;
+; N/A   ; None              ; 11.061 ns       ; field0   ; Output3 ;
+; N/A   ; None              ; 11.048 ns       ; opcode1  ; Output3 ;
+; N/A   ; None              ; 11.038 ns       ; field0   ; Output1 ;
+; N/A   ; None              ; 10.933 ns       ; Clock    ; Output1 ;
+; N/A   ; None              ; 10.699 ns       ; opcode1  ; Output1 ;
+; N/A   ; None              ; 10.520 ns       ; field1   ; Output3 ;
+; N/A   ; None              ; 10.167 ns       ; opcode1  ; Output2 ;
+; N/A   ; None              ; 9.811 ns        ; field1   ; Output1 ;
+; N/A   ; None              ; 9.774 ns        ; field1   ; Output2 ;
++-------+-------------------+-----------------+----------+---------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; th                                                                                                                                   ;
++---------------+-------------+-----------+----------+----------------------------------------------------------------------+----------+
+; Minimum Slack ; Required th ; Actual th ; From     ; To                                                                   ; To Clock ;
++---------------+-------------+-----------+----------+----------------------------------------------------------------------+----------+
+; N/A           ; None        ; -0.874 ns ; Clock    ; ALU:inst|assign2_3:ALU-In_2|assign2_2:inst1|assign2_1:inst|inst5~55  ; Clock    ;
+; N/A           ; None        ; -1.287 ns ; Clock    ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst1|assign2_1:inst|inst5~609  ; Clock    ;
+; N/A           ; None        ; -1.409 ns ; Clock    ; ALU:inst|assign2_3:ALU-In_1|assign2_2:inst3|assign2_1:inst|inst5~8   ; Clock    ;
+; N/A           ; None        ; -1.554 ns ; Clock    ; ALU:inst|assign2_3:ALU-In_1|assign2_2:inst1|assign2_1:inst|inst5~8   ; Clock    ;
+; N/A           ; None        ; -1.557 ns ; Clock    ; ALU:inst|assign2_3:ALU-In_1|assign2_2:inst|assign2_1:inst|inst5~8    ; Clock    ;
+; N/A           ; None        ; -1.560 ns ; Clock    ; ALU:inst|assign2_3:ALU-In_2|assign2_2:inst|assign2_1:inst|inst5~55   ; Clock    ;
+; N/A           ; None        ; -1.992 ns ; Clock    ; ALU:inst|assign2_3:ALU-In_2|assign2_2:inst2|assign2_1:inst|inst5~55  ; Clock    ;
+; N/A           ; None        ; -2.067 ns ; Clock    ; ALU:inst|assign2_3:ALU-In_1|assign2_2:inst2|assign2_1:inst|inst5~8   ; Clock    ;
+; N/A           ; None        ; -2.109 ns ; field0   ; ALU:inst|assign2_3:ALU-In_2|assign2_2:inst1|assign2_1:inst|inst5~55  ; Clock    ;
+; N/A           ; None        ; -2.146 ns ; Clock    ; ALU:inst|assign2_3:ALU-In_2|assign2_2:inst3|assign2_1:inst|inst5~55  ; Clock    ;
+; N/A           ; None        ; -2.182 ns ; Clock    ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst2|assign2_1:inst|inst5~338  ; Clock    ;
+; N/A           ; None        ; -2.261 ns ; field0   ; ALU:inst|assign2_3:ALU-In_1|assign2_2:inst1|assign2_1:inst|inst5~8   ; Clock    ;
+; N/A           ; None        ; -2.270 ns ; Clock    ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst3|assign2_1:inst|inst5~1364 ; Clock    ;
+; N/A           ; None        ; -2.388 ns ; Clock    ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst|assign2_1:inst1|inst5~20   ; Clock    ;
+; N/A           ; None        ; -2.416 ns ; field1   ; ALU:inst|assign2_3:ALU-In_1|assign2_2:inst|assign2_1:inst|inst5~8    ; Clock    ;
+; N/A           ; None        ; -2.426 ns ; field1   ; ALU:inst|assign2_3:ALU-In_2|assign2_2:inst|assign2_1:inst|inst5~55   ; Clock    ;
+; N/A           ; None        ; -2.522 ns ; field0   ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst1|assign2_1:inst|inst5~609  ; Clock    ;
+; N/A           ; None        ; -2.573 ns ; field1   ; ALU:inst|assign2_3:ALU-In_2|assign2_2:inst2|assign2_1:inst|inst5~55  ; Clock    ;
+; N/A           ; None        ; -2.673 ns ; field0   ; ALU:inst|assign2_3:ALU-In_1|assign2_2:inst|assign2_1:inst|inst5~8    ; Clock    ;
+; N/A           ; None        ; -2.683 ns ; field0   ; ALU:inst|assign2_3:ALU-In_2|assign2_2:inst|assign2_1:inst|inst5~55   ; Clock    ;
+; N/A           ; None        ; -2.746 ns ; field1   ; ALU:inst|assign2_3:ALU-In_2|assign2_2:inst1|assign2_1:inst|inst5~55  ; Clock    ;
+; N/A           ; None        ; -2.753 ns ; field0   ; ALU:inst|assign2_3:ALU-In_2|assign2_2:inst3|assign2_1:inst|inst5~55  ; Clock    ;
+; N/A           ; None        ; -2.763 ns ; field1   ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst2|assign2_1:inst|inst5~338  ; Clock    ;
+; N/A           ; None        ; -2.808 ns ; field0   ; ALU:inst|assign2_3:ALU-In_1|assign2_2:inst3|assign2_1:inst|inst5~8   ; Clock    ;
+; N/A           ; None        ; -2.835 ns ; field1   ; ALU:inst|assign2_3:ALU-In_2|assign2_2:inst3|assign2_1:inst|inst5~55  ; Clock    ;
+; N/A           ; None        ; -2.877 ns ; field0   ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst3|assign2_1:inst|inst5~1364 ; Clock    ;
+; N/A           ; None        ; -2.890 ns ; field1   ; ALU:inst|assign2_3:ALU-In_1|assign2_2:inst3|assign2_1:inst|inst5~8   ; Clock    ;
+; N/A           ; None        ; -2.898 ns ; field1   ; ALU:inst|assign2_3:ALU-In_1|assign2_2:inst1|assign2_1:inst|inst5~8   ; Clock    ;
+; N/A           ; None        ; -2.951 ns ; field0   ; ALU:inst|assign2_3:ALU-In_2|assign2_2:inst2|assign2_1:inst|inst5~55  ; Clock    ;
+; N/A           ; None        ; -2.959 ns ; field1   ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst3|assign2_1:inst|inst5~1364 ; Clock    ;
+; N/A           ; None        ; -2.992 ns ; field1   ; ALU:inst|assign2_3:ALU-In_1|assign2_2:inst2|assign2_1:inst|inst5~8   ; Clock    ;
+; N/A           ; None        ; -3.141 ns ; field0   ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst2|assign2_1:inst|inst5~338  ; Clock    ;
+; N/A           ; None        ; -3.159 ns ; field1   ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst1|assign2_1:inst|inst5~609  ; Clock    ;
+; N/A           ; None        ; -3.370 ns ; field0   ; ALU:inst|assign2_3:ALU-In_1|assign2_2:inst2|assign2_1:inst|inst5~8   ; Clock    ;
+; N/A           ; None        ; -3.672 ns ; opcode3  ; ALU:inst|assign2_3:ALU-In_2|assign2_2:inst3|assign2_1:inst|inst5~55  ; Clock    ;
+; N/A           ; None        ; -3.728 ns ; opcode1  ; ALU:inst|assign2_3:ALU-In_2|assign2_2:inst1|assign2_1:inst|inst5~55  ; Clock    ;
+; N/A           ; None        ; -3.858 ns ; opcode3  ; ALU:inst|assign2_3:ALU-In_2|assign2_2:inst2|assign2_1:inst|inst5~55  ; Clock    ;
+; N/A           ; None        ; -3.880 ns ; opcode1  ; ALU:inst|assign2_3:ALU-In_1|assign2_2:inst1|assign2_1:inst|inst5~8   ; Clock    ;
+; N/A           ; None        ; -3.973 ns ; opcode2  ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst2|assign2_1:inst|inst5~338  ; Clock    ;
+; N/A           ; None        ; -4.107 ns ; field1   ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst|assign2_1:inst1|inst5~20   ; Clock    ;
+; N/A           ; None        ; -4.141 ns ; opcode1  ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst1|assign2_1:inst|inst5~609  ; Clock    ;
+; N/A           ; None        ; -4.184 ns ; opcode3  ; ALU:inst|assign2_3:ALU-In_2|assign2_2:inst1|assign2_1:inst|inst5~55  ; Clock    ;
+; N/A           ; None        ; -4.225 ns ; opcode3  ; ALU:inst|assign2_3:ALU-In_2|assign2_2:inst|assign2_1:inst|inst5~55   ; Clock    ;
+; N/A           ; None        ; -4.282 ns ; opcode2  ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst3|assign2_1:inst|inst5~1364 ; Clock    ;
+; N/A           ; None        ; -4.352 ns ; opcode2  ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst1|assign2_1:inst|inst5~609  ; Clock    ;
+; N/A           ; None        ; -4.364 ns ; field0   ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst|assign2_1:inst1|inst5~20   ; Clock    ;
+; N/A           ; None        ; -4.379 ns ; opcode3  ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst2|assign2_1:inst|inst5~338  ; Clock    ;
+; N/A           ; None        ; -4.401 ns ; opcode1  ; ALU:inst|assign2_3:ALU-In_2|assign2_2:inst3|assign2_1:inst|inst5~55  ; Clock    ;
+; N/A           ; None        ; -4.456 ns ; opcode1  ; ALU:inst|assign2_3:ALU-In_1|assign2_2:inst3|assign2_1:inst|inst5~8   ; Clock    ;
+; N/A           ; None        ; -4.469 ns ; opcode3  ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst3|assign2_1:inst|inst5~1364 ; Clock    ;
+; N/A           ; None        ; -4.525 ns ; opcode1  ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst3|assign2_1:inst|inst5~1364 ; Clock    ;
+; N/A           ; None        ; -4.652 ns ; opcode1  ; ALU:inst|assign2_3:ALU-In_1|assign2_2:inst|assign2_1:inst|inst5~8    ; Clock    ;
+; N/A           ; None        ; -4.662 ns ; opcode1  ; ALU:inst|assign2_3:ALU-In_2|assign2_2:inst|assign2_1:inst|inst5~55   ; Clock    ;
+; N/A           ; None        ; -4.665 ns ; opcode2  ; ALU:inst|assign2_3:ALU-In_2|assign2_2:inst|assign2_1:inst|inst5~55   ; Clock    ;
+; N/A           ; None        ; -4.681 ns ; opcode3  ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst|assign2_1:inst1|inst5~20   ; Clock    ;
+; N/A           ; None        ; -4.714 ns ; opcode3  ; ALU:inst|assign2_3:ALU-In_1|assign2_2:inst|assign2_1:inst|inst5~8    ; Clock    ;
+; N/A           ; None        ; -4.723 ns ; opcode2  ; ALU:inst|assign2_3:ALU-In_2|assign2_2:inst2|assign2_1:inst|inst5~55  ; Clock    ;
+; N/A           ; None        ; -4.724 ns ; opcode3  ; ALU:inst|assign2_3:ALU-In_1|assign2_2:inst2|assign2_1:inst|inst5~8   ; Clock    ;
+; N/A           ; None        ; -4.725 ns ; opcode1  ; ALU:inst|assign2_3:ALU-In_2|assign2_2:inst2|assign2_1:inst|inst5~55  ; Clock    ;
+; N/A           ; None        ; -4.751 ns ; opcode2  ; ALU:inst|assign2_3:ALU-In_2|assign2_2:inst1|assign2_1:inst|inst5~55  ; Clock    ;
+; N/A           ; None        ; -4.761 ns ; opcode3  ; ALU:inst|assign2_3:ALU-In_1|assign2_2:inst3|assign2_1:inst|inst5~8   ; Clock    ;
+; N/A           ; None        ; -4.878 ns ; opcode3  ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst1|assign2_1:inst|inst5~609  ; Clock    ;
+; N/A           ; None        ; -4.905 ns ; opcode3  ; ALU:inst|assign2_3:ALU-In_1|assign2_2:inst1|assign2_1:inst|inst5~8   ; Clock    ;
+; N/A           ; None        ; -4.915 ns ; opcode1  ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst2|assign2_1:inst|inst5~338  ; Clock    ;
+; N/A           ; None        ; -4.976 ns ; opcode2  ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst|assign2_1:inst1|inst5~20   ; Clock    ;
+; N/A           ; None        ; -5.144 ns ; opcode1  ; ALU:inst|assign2_3:ALU-In_1|assign2_2:inst2|assign2_1:inst|inst5~8   ; Clock    ;
+; N/A           ; None        ; -5.205 ns ; opcode2  ; ALU:inst|assign2_3:ALU-In_2|assign2_2:inst3|assign2_1:inst|inst5~55  ; Clock    ;
+; N/A           ; None        ; -6.343 ns ; opcode1  ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst|assign2_1:inst1|inst5~20   ; Clock    ;
+; N/A           ; None        ; -7.282 ns ; opcode0  ; ALU:inst|assign2_3:ALU-In_2|assign2_2:inst1|assign2_1:inst|inst5~55  ; Clock    ;
+; N/A           ; None        ; -7.434 ns ; opcode0  ; ALU:inst|assign2_3:ALU-In_1|assign2_2:inst1|assign2_1:inst|inst5~8   ; Clock    ;
+; N/A           ; None        ; -7.695 ns ; opcode0  ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst1|assign2_1:inst|inst5~609  ; Clock    ;
+; N/A           ; None        ; -7.716 ns ; opcode0  ; ALU:inst|assign2_3:ALU-In_1|assign2_2:inst|assign2_1:inst|inst5~8    ; Clock    ;
+; N/A           ; None        ; -7.726 ns ; opcode0  ; ALU:inst|assign2_3:ALU-In_2|assign2_2:inst|assign2_1:inst|inst5~55   ; Clock    ;
+; N/A           ; None        ; -7.778 ns ; field2_0 ; ALU:inst|assign2_3:ALU-In_2|assign2_2:inst3|assign2_1:inst|inst5~55  ; Clock    ;
+; N/A           ; None        ; -7.833 ns ; field2_0 ; ALU:inst|assign2_3:ALU-In_1|assign2_2:inst3|assign2_1:inst|inst5~8   ; Clock    ;
+; N/A           ; None        ; -7.902 ns ; field2_0 ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst3|assign2_1:inst|inst5~1364 ; Clock    ;
+; N/A           ; None        ; -8.094 ns ; field2_2 ; ALU:inst|assign2_3:ALU-In_2|assign2_2:inst1|assign2_1:inst|inst5~55  ; Clock    ;
+; N/A           ; None        ; -8.115 ns ; opcode0  ; ALU:inst|assign2_3:ALU-In_2|assign2_2:inst2|assign2_1:inst|inst5~55  ; Clock    ;
+; N/A           ; None        ; -8.246 ns ; field2_2 ; ALU:inst|assign2_3:ALU-In_1|assign2_2:inst1|assign2_1:inst|inst5~8   ; Clock    ;
+; N/A           ; None        ; -8.257 ns ; field2_3 ; ALU:inst|assign2_3:ALU-In_1|assign2_2:inst|assign2_1:inst|inst5~8    ; Clock    ;
+; N/A           ; None        ; -8.267 ns ; field2_3 ; ALU:inst|assign2_3:ALU-In_2|assign2_2:inst|assign2_1:inst|inst5~55   ; Clock    ;
+; N/A           ; None        ; -8.283 ns ; opcode0  ; ALU:inst|assign2_3:ALU-In_2|assign2_2:inst3|assign2_1:inst|inst5~55  ; Clock    ;
+; N/A           ; None        ; -8.305 ns ; opcode0  ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst2|assign2_1:inst|inst5~338  ; Clock    ;
+; N/A           ; None        ; -8.338 ns ; opcode0  ; ALU:inst|assign2_3:ALU-In_1|assign2_2:inst3|assign2_1:inst|inst5~8   ; Clock    ;
+; N/A           ; None        ; -8.407 ns ; opcode0  ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst3|assign2_1:inst|inst5~1364 ; Clock    ;
+; N/A           ; None        ; -8.507 ns ; field2_2 ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst1|assign2_1:inst|inst5~609  ; Clock    ;
+; N/A           ; None        ; -8.534 ns ; opcode0  ; ALU:inst|assign2_3:ALU-In_1|assign2_2:inst2|assign2_1:inst|inst5~8   ; Clock    ;
+; N/A           ; None        ; -8.643 ns ; field2_1 ; ALU:inst|assign2_3:ALU-In_2|assign2_2:inst2|assign2_1:inst|inst5~55  ; Clock    ;
+; N/A           ; None        ; -8.833 ns ; field2_1 ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst2|assign2_1:inst|inst5~338  ; Clock    ;
+; N/A           ; None        ; -9.062 ns ; field2_1 ; ALU:inst|assign2_3:ALU-In_1|assign2_2:inst2|assign2_1:inst|inst5~8   ; Clock    ;
+; N/A           ; None        ; -9.407 ns ; opcode0  ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst|assign2_1:inst1|inst5~20   ; Clock    ;
+; N/A           ; None        ; -9.948 ns ; field2_3 ; ALU:inst|assign2_3:ALU-Out|assign2_2:inst|assign2_1:inst1|inst5~20   ; Clock    ;
++---------------+-------------+-----------+----------+----------------------------------------------------------------------+----------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 7.1 Build 156 04/30/2007 SJ Web Edition
+    Info: Processing started: Tue May 05 14:17:53 2009
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off system -c system --timing_analysis_only
+Warning: Timing Analysis is analyzing one or more combinational loops as latches
+    Warning: Node "assign2_3:inst2|assign2_2:inst|assign2_1:inst1|inst5~20" is a latch
+    Warning: Node "assign2_3:inst2|assign2_2:inst|assign2_1:inst|inst5~20" is a latch
+    Warning: Node "ALU:inst|assign2_3:ALU-Out|assign2_2:inst|assign2_1:inst1|inst5~20" is a latch
+    Warning: Node "ALU:inst|assign2_3:ALU-In_1|assign2_2:inst|assign2_1:inst1|inst5~32" is a latch
+    Warning: Node "ALU:inst|assign2_3:ALU-In_2|assign2_2:inst|assign2_1:inst1|inst5~27" is a latch
+    Warning: Node "ALU:inst|assign2_3:ALU-In_1|assign2_2:inst|assign2_1:inst|inst5~8" is a latch
+    Warning: Node "ALU:inst|assign2_3:ALU-In_2|assign2_2:inst|assign2_1:inst|inst5~55" is a latch
+    Warning: Node "assign2_3:inst2|assign2_2:inst3|assign2_1:inst1|inst5~20" is a latch
+    Warning: Node "assign2_3:inst2|assign2_2:inst3|assign2_1:inst|inst5~20" is a latch
+    Warning: Node "ALU:inst|assign2_3:ALU-Out|assign2_2:inst3|assign2_1:inst1|inst5~20" is a latch
+    Warning: Node "ALU:inst|assign2_3:ALU-Out|assign2_2:inst3|assign2_1:inst|inst5~1364" is a latch
+    Warning: Node "ALU:inst|assign2_3:ALU-In_2|assign2_2:inst3|assign2_1:inst1|inst5~22" is a latch
+    Warning: Node "ALU:inst|assign2_3:ALU-In_1|assign2_2:inst3|assign2_1:inst1|inst5~25" is a latch
+    Warning: Node "ALU:inst|assign2_3:ALU-In_1|assign2_2:inst2|assign2_1:inst1|inst5~31" is a latch
+    Warning: Node "ALU:inst|assign2_3:ALU-In_2|assign2_2:inst2|assign2_1:inst1|inst5~31" is a latch
+    Warning: Node "ALU:inst|assign2_3:ALU-In_2|assign2_2:inst3|assign2_1:inst|inst5~55" is a latch
+    Warning: Node "ALU:inst|assign2_3:ALU-In_1|assign2_2:inst3|assign2_1:inst|inst5~8" is a latch
+    Warning: Node "ALU:inst|assign2_3:ALU-In_1|assign2_2:inst2|assign2_1:inst|inst5~8" is a latch
+    Warning: Node "ALU:inst|assign2_3:ALU-In_2|assign2_2:inst1|assign2_1:inst1|inst5~33" is a latch
+    Warning: Node "ALU:inst|assign2_3:ALU-In_1|assign2_2:inst1|assign2_1:inst1|inst5~29" is a latch
+    Warning: Node "ALU:inst|assign2_3:ALU-In_2|assign2_2:inst2|assign2_1:inst|inst5~55" is a latch
+    Warning: Node "ALU:inst|assign2_3:ALU-In_2|assign2_2:inst1|assign2_1:inst|inst5~55" is a latch
+    Warning: Node "ALU:inst|assign2_3:ALU-In_1|assign2_2:inst1|assign2_1:inst|inst5~8" is a latch
+    Warning: Node "assign2_3:inst2|assign2_2:inst1|assign2_1:inst1|inst5~20" is a latch
+    Warning: Node "assign2_3:inst2|assign2_2:inst1|assign2_1:inst|inst5~20" is a latch
+    Warning: Node "assign2_3:inst2|assign2_2:inst2|assign2_1:inst1|inst5~20" is a latch
+    Warning: Node "ALU:inst|assign2_3:ALU-Out|assign2_2:inst1|assign2_1:inst1|inst5~20" is a latch
+    Warning: Node "assign2_3:inst2|assign2_2:inst2|assign2_1:inst|inst5~20" is a latch
+    Warning: Node "ALU:inst|assign2_3:ALU-Out|assign2_2:inst1|assign2_1:inst|inst5~609" is a latch
+    Warning: Node "ALU:inst|assign2_3:ALU-Out|assign2_2:inst2|assign2_1:inst1|inst5~20" is a latch
+    Warning: Node "ALU:inst|assign2_3:ALU-Out|assign2_2:inst2|assign2_1:inst|inst5~338" is a latch
+Warning: Found combinational loop of 1 nodes
+    Warning: Node "assign2_3:11|assign2_2:inst3|assign2_1:inst1|inst5~68"
+Warning: Found combinational loop of 1 nodes
+    Warning: Node "assign2_3:11|assign2_2:inst3|assign2_1:inst|inst5~28"
+Warning: Found combinational loop of 1 nodes
+    Warning: Node "assign2_3:11|assign2_2:inst2|assign2_1:inst1|inst5~68"
+Warning: Found combinational loop of 1 nodes
+    Warning: Node "assign2_3:11|assign2_2:inst2|assign2_1:inst|inst5~28"
+Warning: Found combinational loop of 1 nodes
+    Warning: Node "assign2_3:11|assign2_2:inst1|assign2_1:inst1|inst5~68"
+Warning: Found combinational loop of 1 nodes
+    Warning: Node "assign2_3:11|assign2_2:inst1|assign2_1:inst|inst5~28"
+Warning: Found combinational loop of 1 nodes
+    Warning: Node "assign2_3:10|assign2_2:inst2|assign2_1:inst1|inst5~68"
+Warning: Found combinational loop of 1 nodes
+    Warning: Node "assign2_3:10|assign2_2:inst2|assign2_1:inst|inst5~28"
+Warning: Found combinational loop of 1 nodes
+    Warning: Node "assign2_3:01|assign2_2:inst2|assign2_1:inst1|inst5~70"
+Warning: Found combinational loop of 1 nodes
+    Warning: Node "assign2_3:01|assign2_2:inst2|assign2_1:inst|inst5~28"
+Warning: Found combinational loop of 1 nodes
+    Warning: Node "readin_reg:inst1|assign2_3:P_Reg_10|assign2_2:inst2|assign2_1:inst1|inst5~78"
+Warning: Found combinational loop of 1 nodes
+    Warning: Node "readin_reg:inst1|assign2_3:P_Reg_10|assign2_2:inst2|assign2_1:inst|inst5~53"
+Warning: Found combinational loop of 1 nodes
+    Warning: Node "readin_reg:inst1|assign2_3:P_Reg_11|assign2_2:inst2|assign2_1:inst1|inst5~78"
+Warning: Found combinational loop of 1 nodes
+    Warning: Node "readin_reg:inst1|assign2_3:P_Reg_11|assign2_2:inst2|assign2_1:inst|inst5~53"
+Warning: Found combinational loop of 1 nodes
+    Warning: Node "readin_reg:inst1|assign2_3:P_Reg_01|assign2_2:inst2|assign2_1:inst1|inst5~78"
+Warning: Found combinational loop of 1 nodes
+    Warning: Node "readin_reg:inst1|assign2_3:P_Reg_01|assign2_2:inst2|assign2_1:inst|inst5~53"
+Warning: Found combinational loop of 1 nodes
+    Warning: Node "readin_reg:inst1|assign2_3:P_Reg_00|assign2_2:inst2|assign2_1:inst1|inst5~78"
+Warning: Found combinational loop of 1 nodes
+    Warning: Node "readin_reg:inst1|assign2_3:P_Reg_00|assign2_2:inst2|assign2_1:inst|inst5~57"
+Warning: Found combinational loop of 1 nodes
+    Warning: Node "assign2_3:01|assign2_2:inst1|assign2_1:inst1|inst5~70"
+Warning: Found combinational loop of 1 nodes
+    Warning: Node "assign2_3:01|assign2_2:inst1|assign2_1:inst|inst5~28"
+Warning: Found combinational loop of 1 nodes
+    Warning: Node "assign2_3:10|assign2_2:inst1|assign2_1:inst1|inst5~68"
+Warning: Found combinational loop of 1 nodes
+    Warning: Node "assign2_3:10|assign2_2:inst1|assign2_1:inst|inst5~28"
+Warning: Found combinational loop of 1 nodes
+    Warning: Node "readin_reg:inst1|assign2_3:P_Reg_01|assign2_2:inst1|assign2_1:inst1|inst5~78"
+Warning: Found combinational loop of 1 nodes
+    Warning: Node "readin_reg:inst1|assign2_3:P_Reg_01|assign2_2:inst1|assign2_1:inst|inst5~53"
+Warning: Found combinational loop of 1 nodes
+    Warning: Node "readin_reg:inst1|assign2_3:P_Reg_11|assign2_2:inst1|assign2_1:inst1|inst5~78"
+Warning: Found combinational loop of 1 nodes
+    Warning: Node "readin_reg:inst1|assign2_3:P_Reg_11|assign2_2:inst1|assign2_1:inst|inst5~53"
+Warning: Found combinational loop of 1 nodes
+    Warning: Node "readin_reg:inst1|assign2_3:P_Reg_00|assign2_2:inst1|assign2_1:inst1|inst5~78"
+Warning: Found combinational loop of 1 nodes
+    Warning: Node "readin_reg:inst1|assign2_3:P_Reg_00|assign2_2:inst1|assign2_1:inst|inst5~57"
+Warning: Found combinational loop of 1 nodes
+    Warning: Node "readin_reg:inst1|assign2_3:P_Reg_10|assign2_2:inst1|assign2_1:inst1|inst5~78"
+Warning: Found combinational loop of 1 nodes
+    Warning: Node "readin_reg:inst1|assign2_3:P_Reg_10|assign2_2:inst1|assign2_1:inst|inst5~53"
+Warning: Found combinational loop of 1 nodes
+    Warning: Node "assign2_3:10|assign2_2:inst|assign2_1:inst1|inst5~68"
+Warning: Found combinational loop of 1 nodes
+    Warning: Node "assign2_3:10|assign2_2:inst|assign2_1:inst|inst5~28"
+Warning: Found combinational loop of 1 nodes
+    Warning: Node "assign2_3:01|assign2_2:inst|assign2_1:inst1|inst5~71"
+Warning: Found combinational loop of 1 nodes
+    Warning: Node "assign2_3:01|assign2_2:inst|assign2_1:inst|inst5~28"
+Warning: Found combinational loop of 1 nodes
+    Warning: Node "assign2_3:10|assign2_2:inst3|assign2_1:inst1|inst5~75"
+Warning: Found combinational loop of 1 nodes
+    Warning: Node "assign2_3:10|assign2_2:inst3|assign2_1:inst|inst5~28"
+Warning: Found combinational loop of 2 nodes
+    Warning: Node "ALU:inst|assign2_3:ALU-Out|assign2_2:inst|assign2_1:inst|inst5~324"
+    Warning: Node "ALU:inst|assign2_3:ALU-Out|assign2_2:inst|assign2_1:inst|inst5~327"
+Warning: Found combinational loop of 1 nodes
+    Warning: Node "assign2_3:01|assign2_2:inst3|assign2_1:inst1|inst5~78"
+Warning: Found combinational loop of 1 nodes
+    Warning: Node "assign2_3:01|assign2_2:inst3|assign2_1:inst|inst5~28"
+Warning: Found combinational loop of 1 nodes
+    Warning: Node "readin_reg:inst1|assign2_3:P_Reg_11|assign2_2:inst3|assign2_1:inst1|inst5~78"
+Warning: Found combinational loop of 1 nodes
+    Warning: Node "readin_reg:inst1|assign2_3:P_Reg_11|assign2_2:inst3|assign2_1:inst|inst5~53"
+Warning: Found combinational loop of 1 nodes
+    Warning: Node "readin_reg:inst1|assign2_3:P_Reg_01|assign2_2:inst3|assign2_1:inst1|inst5~78"
+Warning: Found combinational loop of 1 nodes
+    Warning: Node "readin_reg:inst1|assign2_3:P_Reg_01|assign2_2:inst3|assign2_1:inst|inst5~53"
+Warning: Found combinational loop of 1 nodes
+    Warning: Node "readin_reg:inst1|assign2_3:P_Reg_00|assign2_2:inst3|assign2_1:inst1|inst5~78"
+Warning: Found combinational loop of 1 nodes
+    Warning: Node "readin_reg:inst1|assign2_3:P_Reg_00|assign2_2:inst3|assign2_1:inst|inst5~57"
+Warning: Found combinational loop of 1 nodes
+    Warning: Node "readin_reg:inst1|assign2_3:P_Reg_10|assign2_2:inst3|assign2_1:inst1|inst5~78"
+Warning: Found combinational loop of 1 nodes
+    Warning: Node "readin_reg:inst1|assign2_3:P_Reg_10|assign2_2:inst3|assign2_1:inst|inst5~53"
+Warning: Found combinational loop of 1 nodes
+    Warning: Node "assign2_3:11|assign2_2:inst|assign2_1:inst1|inst5~75"
+Warning: Found combinational loop of 1 nodes
+    Warning: Node "assign2_3:11|assign2_2:inst|assign2_1:inst|inst5~28"
+Warning: Found combinational loop of 1 nodes
+    Warning: Node "readin_reg:inst1|assign2_3:P_Reg_11|assign2_2:inst|assign2_1:inst1|inst5~78"
+Warning: Found combinational loop of 1 nodes
+    Warning: Node "readin_reg:inst1|assign2_3:P_Reg_11|assign2_2:inst|assign2_1:inst|inst5~53"
+Warning: Found combinational loop of 1 nodes
+    Warning: Node "readin_reg:inst1|assign2_3:P_Reg_10|assign2_2:inst|assign2_1:inst1|inst5~78"
+Warning: Found combinational loop of 1 nodes
+    Warning: Node "readin_reg:inst1|assign2_3:P_Reg_10|assign2_2:inst|assign2_1:inst|inst5~53"
+Warning: Found combinational loop of 1 nodes
+    Warning: Node "readin_reg:inst1|assign2_3:P_Reg_00|assign2_2:inst|assign2_1:inst1|inst5~78"
+Warning: Found combinational loop of 1 nodes
+    Warning: Node "readin_reg:inst1|assign2_3:P_Reg_00|assign2_2:inst|assign2_1:inst|inst5~57"
+Warning: Found combinational loop of 1 nodes
+    Warning: Node "readin_reg:inst1|assign2_3:P_Reg_01|assign2_2:inst|assign2_1:inst1|inst5~78"
+Warning: Found combinational loop of 1 nodes
+    Warning: Node "readin_reg:inst1|assign2_3:P_Reg_01|assign2_2:inst|assign2_1:inst|inst5~53"
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "Clock" is a latch enable and/or memory write/read enable. Will not compute fmax for this pin.
+Info: Clock "Clock" has Internal fmax of 70.22 MHz between source register "assign2_3:inst2|assign2_2:inst1|assign2_1:inst1|inst5~20" and destination register "ALU:inst|assign2_3:ALU-In_1|assign2_2:inst2|assign2_1:inst|inst5~8" (period= 14.24 ns)
+    Info: + Longest register to register delay is 5.838 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCCOMB_X22_Y6_N30; Fanout = 1; REG Node = 'assign2_3:inst2|assign2_2:inst1|assign2_1:inst1|inst5~20'
+        Info: 2: + IC(0.251 ns) + CELL(0.150 ns) = 0.401 ns; Loc. = LCCOMB_X22_Y6_N28; Fanout = 8; COMB Node = 'readin_reg:inst1|assign2_3:P_Reg_00|assign2_2:inst1|assign2_1:inst|inst5~56'
+        Info: 3: + IC(0.000 ns) + CELL(1.320 ns) = 1.721 ns; Loc. = LCCOMB_X25_Y3_N18; Fanout = 3; COMB LOOP Node = 'readin_reg:inst1|assign2_3:P_Reg_00|assign2_2:inst1|assign2_1:inst|inst5~57'
+            Info: Loc. = LCCOMB_X25_Y3_N18; Node "readin_reg:inst1|assign2_3:P_Reg_00|assign2_2:inst1|assign2_1:inst|inst5~57"
+        Info: 4: + IC(0.000 ns) + CELL(0.677 ns) = 2.398 ns; Loc. = LCCOMB_X25_Y3_N14; Fanout = 2; COMB LOOP Node = 'readin_reg:inst1|assign2_3:P_Reg_00|assign2_2:inst1|assign2_1:inst1|inst5~78'
+            Info: Loc. = LCCOMB_X25_Y3_N14; Node "readin_reg:inst1|assign2_3:P_Reg_00|assign2_2:inst1|assign2_1:inst1|inst5~78"
+            Info: Loc. = LCCOMB_X25_Y3_N18; Node "readin_reg:inst1|assign2_3:P_Reg_00|assign2_2:inst1|assign2_1:inst|inst5~57"
+        Info: 5: + IC(0.272 ns) + CELL(0.275 ns) = 2.945 ns; Loc. = LCCOMB_X25_Y3_N0; Fanout = 1; COMB Node = 'readin_reg:inst1|MUX41:MUX_Q1|6~7'
+        Info: 6: + IC(0.240 ns) + CELL(0.150 ns) = 3.335 ns; Loc. = LCCOMB_X25_Y3_N2; Fanout = 6; COMB Node = 'readin_reg:inst1|MUX41:MUX_Q1|6~8'
+        Info: 7: + IC(0.000 ns) + CELL(0.937 ns) = 4.272 ns; Loc. = LCCOMB_X26_Y3_N18; Fanout = 3; COMB LOOP Node = 'assign2_3:10|assign2_2:inst1|assign2_1:inst|inst5~28'
+            Info: Loc. = LCCOMB_X26_Y3_N18; Node "assign2_3:10|assign2_2:inst1|assign2_1:inst|inst5~28"
+        Info: 8: + IC(0.000 ns) + CELL(0.707 ns) = 4.979 ns; Loc. = LCCOMB_X26_Y3_N20; Fanout = 2; COMB LOOP Node = 'assign2_3:10|assign2_2:inst1|assign2_1:inst1|inst5~68'
+            Info: Loc. = LCCOMB_X26_Y3_N20; Node "assign2_3:10|assign2_2:inst1|assign2_1:inst1|inst5~68"
+            Info: Loc. = LCCOMB_X26_Y3_N18; Node "assign2_3:10|assign2_2:inst1|assign2_1:inst|inst5~28"
+        Info: 9: + IC(0.439 ns) + CELL(0.420 ns) = 5.838 ns; Loc. = LCCOMB_X26_Y3_N26; Fanout = 1; REG Node = 'ALU:inst|assign2_3:ALU-In_1|assign2_2:inst2|assign2_1:inst|inst5~8'
+        Info: Total cell delay = 4.636 ns ( 79.41 % )
+        Info: Total interconnect delay = 1.202 ns ( 20.59 % )
+    Info: - Smallest clock skew is -0.004 ns
+        Info: + Shortest clock path from clock "Clock" to destination register is 2.348 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.989 ns) = 0.989 ns; Loc. = PIN_17; Fanout = 55; CLK Node = 'Clock'
+            Info: 2: + IC(0.122 ns) + CELL(0.000 ns) = 1.111 ns; Loc. = CLKCTRL_G2; Fanout = 31; COMB Node = 'Clock~clkctrl'
+            Info: 3: + IC(1.087 ns) + CELL(0.150 ns) = 2.348 ns; Loc. = LCCOMB_X26_Y3_N26; Fanout = 1; REG Node = 'ALU:inst|assign2_3:ALU-In_1|assign2_2:inst2|assign2_1:inst|inst5~8'
+            Info: Total cell delay = 1.139 ns ( 48.51 % )
+            Info: Total interconnect delay = 1.209 ns ( 51.49 % )
+        Info: - Longest clock path from clock "Clock" to source register is 2.352 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.989 ns) = 0.989 ns; Loc. = PIN_17; Fanout = 55; CLK Node = 'Clock'
+            Info: 2: + IC(0.122 ns) + CELL(0.000 ns) = 1.111 ns; Loc. = CLKCTRL_G2; Fanout = 31; COMB Node = 'Clock~clkctrl'
+            Info: 3: + IC(1.091 ns) + CELL(0.150 ns) = 2.352 ns; Loc. = LCCOMB_X22_Y6_N30; Fanout = 1; REG Node = 'assign2_3:inst2|assign2_2:inst1|assign2_1:inst1|inst5~20'
+            Info: Total cell delay = 1.139 ns ( 48.43 % )
+            Info: Total interconnect delay = 1.213 ns ( 51.57 % )
+    Info: + Micro clock to output delay of source is 0.000 ns
+    Info: + Micro setup delay of destination is 1.278 ns
+    Info: Delay path is controlled by inverted clocks -- if clock duty cycle is 50%, fmax is divided by two
+Info: tsu for register "ALU:inst|assign2_3:ALU-Out|assign2_2:inst|assign2_1:inst1|inst5~20" (data pin = "opcode0", clock pin = "Clock") is 11.234 ns
+    Info: + Longest pin to register delay is 12.699 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.850 ns) = 0.850 ns; Loc. = PIN_64; Fanout = 18; PIN Node = 'opcode0'
+        Info: 2: + IC(5.143 ns) + CELL(0.150 ns) = 6.143 ns; Loc. = LCCOMB_X21_Y6_N16; Fanout = 32; COMB Node = 'readin_reg:inst1|inst6~9'
+        Info: 3: + IC(0.000 ns) + CELL(0.756 ns) = 6.899 ns; Loc. = LCCOMB_X21_Y5_N4; Fanout = 3; COMB LOOP Node = 'readin_reg:inst1|assign2_3:P_Reg_00|assign2_2:inst3|assign2_1:inst|inst5~57'
+            Info: Loc. = LCCOMB_X21_Y5_N4; Node "readin_reg:inst1|assign2_3:P_Reg_00|assign2_2:inst3|assign2_1:inst|inst5~57"
+        Info: 4: + IC(0.000 ns) + CELL(0.540 ns) = 7.439 ns; Loc. = LCCOMB_X21_Y5_N2; Fanout = 2; COMB LOOP Node = 'readin_reg:inst1|assign2_3:P_Reg_00|assign2_2:inst3|assign2_1:inst1|inst5~78'
+            Info: Loc. = LCCOMB_X21_Y5_N2; Node "readin_reg:inst1|assign2_3:P_Reg_00|assign2_2:inst3|assign2_1:inst1|inst5~78"
+            Info: Loc. = LCCOMB_X21_Y5_N4; Node "readin_reg:inst1|assign2_3:P_Reg_00|assign2_2:inst3|assign2_1:inst|inst5~57"
+        Info: 5: + IC(0.747 ns) + CELL(0.275 ns) = 8.461 ns; Loc. = LCCOMB_X21_Y6_N22; Fanout = 1; COMB Node = 'readin_reg:inst1|MUX41:MUX_Q3|6~6'
+        Info: 6: + IC(0.250 ns) + CELL(0.150 ns) = 8.861 ns; Loc. = LCCOMB_X21_Y6_N0; Fanout = 6; COMB Node = 'readin_reg:inst1|MUX41:MUX_Q3|6~7'
+        Info: 7: + IC(0.000 ns) + CELL(0.736 ns) = 9.597 ns; Loc. = LCCOMB_X20_Y6_N18; Fanout = 3; COMB LOOP Node = 'assign2_3:01|assign2_2:inst3|assign2_1:inst|inst5~28'
+            Info: Loc. = LCCOMB_X20_Y6_N18; Node "assign2_3:01|assign2_2:inst3|assign2_1:inst|inst5~28"
+        Info: 8: + IC(0.000 ns) + CELL(0.689 ns) = 10.286 ns; Loc. = LCCOMB_X20_Y6_N30; Fanout = 4; COMB LOOP Node = 'assign2_3:01|assign2_2:inst3|assign2_1:inst1|inst5~78'
+            Info: Loc. = LCCOMB_X20_Y6_N30; Node "assign2_3:01|assign2_2:inst3|assign2_1:inst1|inst5~78"
+            Info: Loc. = LCCOMB_X20_Y6_N18; Node "assign2_3:01|assign2_2:inst3|assign2_1:inst|inst5~28"
+        Info: 9: + IC(0.000 ns) + CELL(1.699 ns) = 11.985 ns; Loc. = LCCOMB_X26_Y3_N16; Fanout = 2; COMB LOOP Node = 'ALU:inst|assign2_3:ALU-Out|assign2_2:inst|assign2_1:inst|inst5~327'
+            Info: Loc. = LCCOMB_X20_Y6_N30; Node "assign2_3:01|assign2_2:inst3|assign2_1:inst1|inst5~78"
+            Info: Loc. = LCCOMB_X20_Y6_N18; Node "assign2_3:01|assign2_2:inst3|assign2_1:inst|inst5~28"
+            Info: Loc. = LCCOMB_X26_Y3_N16; Node "ALU:inst|assign2_3:ALU-Out|assign2_2:inst|assign2_1:inst|inst5~327"
+            Info: Loc. = LCCOMB_X22_Y3_N24; Node "ALU:inst|assign2_3:ALU-Out|assign2_2:inst|assign2_1:inst|inst5~324"
+        Info: 10: + IC(0.439 ns) + CELL(0.275 ns) = 12.699 ns; Loc. = LCCOMB_X25_Y3_N24; Fanout = 1; REG Node = 'ALU:inst|assign2_3:ALU-Out|assign2_2:inst|assign2_1:inst1|inst5~20'
+        Info: Total cell delay = 6.120 ns ( 48.19 % )
+        Info: Total interconnect delay = 6.579 ns ( 51.81 % )
+    Info: + Micro setup delay of destination is 0.874 ns
+    Info: - Shortest clock path from clock "Clock" to destination register is 2.339 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.989 ns) = 0.989 ns; Loc. = PIN_17; Fanout = 55; CLK Node = 'Clock'
+        Info: 2: + IC(0.122 ns) + CELL(0.000 ns) = 1.111 ns; Loc. = CLKCTRL_G2; Fanout = 31; COMB Node = 'Clock~clkctrl'
+        Info: 3: + IC(1.078 ns) + CELL(0.150 ns) = 2.339 ns; Loc. = LCCOMB_X25_Y3_N24; Fanout = 1; REG Node = 'ALU:inst|assign2_3:ALU-Out|assign2_2:inst|assign2_1:inst1|inst5~20'
+        Info: Total cell delay = 1.139 ns ( 48.70 % )
+        Info: Total interconnect delay = 1.200 ns ( 51.30 % )
+Info: tco from clock "Clock" to destination pin "Output0" through register "assign2_3:inst2|assign2_2:inst|assign2_1:inst1|inst5~20" is 11.554 ns
+    Info: + Longest clock path from clock "Clock" to source register is 2.338 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.989 ns) = 0.989 ns; Loc. = PIN_17; Fanout = 55; CLK Node = 'Clock'
+        Info: 2: + IC(0.122 ns) + CELL(0.000 ns) = 1.111 ns; Loc. = CLKCTRL_G2; Fanout = 31; COMB Node = 'Clock~clkctrl'
+        Info: 3: + IC(1.077 ns) + CELL(0.150 ns) = 2.338 ns; Loc. = LCCOMB_X25_Y3_N10; Fanout = 1; REG Node = 'assign2_3:inst2|assign2_2:inst|assign2_1:inst1|inst5~20'
+        Info: Total cell delay = 1.139 ns ( 48.72 % )
+        Info: Total interconnect delay = 1.199 ns ( 51.28 % )
+    Info: + Micro clock to output delay of source is 0.000 ns
+    Info: + Longest register to pin delay is 9.216 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCCOMB_X25_Y3_N10; Fanout = 1; REG Node = 'assign2_3:inst2|assign2_2:inst|assign2_1:inst1|inst5~20'
+        Info: 2: + IC(0.264 ns) + CELL(0.150 ns) = 0.414 ns; Loc. = LCCOMB_X25_Y3_N16; Fanout = 8; COMB Node = 'readin_reg:inst1|assign2_3:P_Reg_00|assign2_2:inst|assign2_1:inst|inst5~56'
+        Info: 3: + IC(0.000 ns) + CELL(0.726 ns) = 1.140 ns; Loc. = LCCOMB_X24_Y3_N0; Fanout = 3; COMB LOOP Node = 'readin_reg:inst1|assign2_3:P_Reg_00|assign2_2:inst|assign2_1:inst|inst5~57'
+            Info: Loc. = LCCOMB_X24_Y3_N0; Node "readin_reg:inst1|assign2_3:P_Reg_00|assign2_2:inst|assign2_1:inst|inst5~57"
+        Info: 4: + IC(0.000 ns) + CELL(0.726 ns) = 1.866 ns; Loc. = LCCOMB_X24_Y3_N16; Fanout = 2; COMB LOOP Node = 'readin_reg:inst1|assign2_3:P_Reg_00|assign2_2:inst|assign2_1:inst1|inst5~78'
+            Info: Loc. = LCCOMB_X24_Y3_N16; Node "readin_reg:inst1|assign2_3:P_Reg_00|assign2_2:inst|assign2_1:inst1|inst5~78"
+            Info: Loc. = LCCOMB_X24_Y3_N0; Node "readin_reg:inst1|assign2_3:P_Reg_00|assign2_2:inst|assign2_1:inst|inst5~57"
+        Info: 5: + IC(0.259 ns) + CELL(0.275 ns) = 2.400 ns; Loc. = LCCOMB_X24_Y3_N28; Fanout = 1; COMB Node = 'readin_reg:inst1|MUX41:MUX_Q0|6~7'
+        Info: 6: + IC(0.255 ns) + CELL(0.150 ns) = 2.805 ns; Loc. = LCCOMB_X24_Y3_N22; Fanout = 6; COMB Node = 'readin_reg:inst1|MUX41:MUX_Q0|6~8'
+        Info: 7: + IC(0.000 ns) + CELL(1.386 ns) = 4.191 ns; Loc. = LCCOMB_X21_Y5_N8; Fanout = 3; COMB LOOP Node = 'assign2_3:11|assign2_2:inst|assign2_1:inst|inst5~28'
+            Info: Loc. = LCCOMB_X21_Y5_N8; Node "assign2_3:11|assign2_2:inst|assign2_1:inst|inst5~28"
+        Info: 8: + IC(0.000 ns) + CELL(0.542 ns) = 4.733 ns; Loc. = LCCOMB_X21_Y5_N30; Fanout = 2; COMB LOOP Node = 'assign2_3:11|assign2_2:inst|assign2_1:inst1|inst5~75'
+            Info: Loc. = LCCOMB_X21_Y5_N30; Node "assign2_3:11|assign2_2:inst|assign2_1:inst1|inst5~75"
+            Info: Loc. = LCCOMB_X21_Y5_N8; Node "assign2_3:11|assign2_2:inst|assign2_1:inst|inst5~28"
+        Info: 9: + IC(1.841 ns) + CELL(2.642 ns) = 9.216 ns; Loc. = PIN_24; Fanout = 0; PIN Node = 'Output0'
+        Info: Total cell delay = 6.597 ns ( 71.58 % )
+        Info: Total interconnect delay = 2.619 ns ( 28.42 % )
+Info: Longest tpd from source pin "opcode0" to destination pin "Output0" is 16.085 ns
+    Info: 1: + IC(0.000 ns) + CELL(0.850 ns) = 0.850 ns; Loc. = PIN_64; Fanout = 18; PIN Node = 'opcode0'
+    Info: 2: + IC(5.143 ns) + CELL(0.150 ns) = 6.143 ns; Loc. = LCCOMB_X21_Y6_N16; Fanout = 32; COMB Node = 'readin_reg:inst1|inst6~9'
+    Info: 3: + IC(0.000 ns) + CELL(1.711 ns) = 7.854 ns; Loc. = LCCOMB_X25_Y3_N28; Fanout = 3; COMB LOOP Node = 'readin_reg:inst1|assign2_3:P_Reg_01|assign2_2:inst|assign2_1:inst|inst5~53'
+        Info: Loc. = LCCOMB_X25_Y3_N28; Node "readin_reg:inst1|assign2_3:P_Reg_01|assign2_2:inst|assign2_1:inst|inst5~53"
+    Info: 4: + IC(0.000 ns) + CELL(1.018 ns) = 8.872 ns; Loc. = LCCOMB_X24_Y3_N10; Fanout = 2; COMB LOOP Node = 'readin_reg:inst1|assign2_3:P_Reg_01|assign2_2:inst|assign2_1:inst1|inst5~78'
+        Info: Loc. = LCCOMB_X24_Y3_N10; Node "readin_reg:inst1|assign2_3:P_Reg_01|assign2_2:inst|assign2_1:inst1|inst5~78"
+        Info: Loc. = LCCOMB_X25_Y3_N28; Node "readin_reg:inst1|assign2_3:P_Reg_01|assign2_2:inst|assign2_1:inst|inst5~53"
+    Info: 5: + IC(0.247 ns) + CELL(0.150 ns) = 9.269 ns; Loc. = LCCOMB_X24_Y3_N28; Fanout = 1; COMB Node = 'readin_reg:inst1|MUX41:MUX_Q0|6~7'
+    Info: 6: + IC(0.255 ns) + CELL(0.150 ns) = 9.674 ns; Loc. = LCCOMB_X24_Y3_N22; Fanout = 6; COMB Node = 'readin_reg:inst1|MUX41:MUX_Q0|6~8'
+    Info: 7: + IC(0.000 ns) + CELL(1.386 ns) = 11.060 ns; Loc. = LCCOMB_X21_Y5_N8; Fanout = 3; COMB LOOP Node = 'assign2_3:11|assign2_2:inst|assign2_1:inst|inst5~28'
+        Info: Loc. = LCCOMB_X21_Y5_N8; Node "assign2_3:11|assign2_2:inst|assign2_1:inst|inst5~28"
+    Info: 8: + IC(0.000 ns) + CELL(0.542 ns) = 11.602 ns; Loc. = LCCOMB_X21_Y5_N30; Fanout = 2; COMB LOOP Node = 'assign2_3:11|assign2_2:inst|assign2_1:inst1|inst5~75'
+        Info: Loc. = LCCOMB_X21_Y5_N30; Node "assign2_3:11|assign2_2:inst|assign2_1:inst1|inst5~75"
+        Info: Loc. = LCCOMB_X21_Y5_N8; Node "assign2_3:11|assign2_2:inst|assign2_1:inst|inst5~28"
+    Info: 9: + IC(1.841 ns) + CELL(2.642 ns) = 16.085 ns; Loc. = PIN_24; Fanout = 0; PIN Node = 'Output0'
+    Info: Total cell delay = 8.599 ns ( 53.46 % )
+    Info: Total interconnect delay = 7.486 ns ( 46.54 % )
+Info: th for register "ALU:inst|assign2_3:ALU-In_2|assign2_2:inst1|assign2_1:inst|inst5~55" (data pin = "Clock", clock pin = "Clock") is -0.874 ns
+    Info: + Longest clock path from clock "Clock" to destination register is 2.353 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.989 ns) = 0.989 ns; Loc. = PIN_17; Fanout = 55; CLK Node = 'Clock'
+        Info: 2: + IC(0.122 ns) + CELL(0.000 ns) = 1.111 ns; Loc. = CLKCTRL_G2; Fanout = 31; COMB Node = 'Clock~clkctrl'
+        Info: 3: + IC(1.092 ns) + CELL(0.150 ns) = 2.353 ns; Loc. = LCCOMB_X22_Y6_N26; Fanout = 1; REG Node = 'ALU:inst|assign2_3:ALU-In_2|assign2_2:inst1|assign2_1:inst|inst5~55'
+        Info: Total cell delay = 1.139 ns ( 48.41 % )
+        Info: Total interconnect delay = 1.214 ns ( 51.59 % )
+    Info: + Micro hold delay of destination is 0.000 ns
+    Info: - Shortest pin to register delay is 3.227 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.989 ns) = 0.989 ns; Loc. = PIN_17; Fanout = 55; CLK Node = 'Clock'
+        Info: 2: + IC(0.000 ns) + CELL(1.554 ns) = 2.543 ns; Loc. = LCCOMB_X22_Y6_N0; Fanout = 3; COMB LOOP Node = 'assign2_3:01|assign2_2:inst2|assign2_1:inst1|inst5~70'
+            Info: Loc. = LCCOMB_X22_Y6_N0; Node "assign2_3:01|assign2_2:inst2|assign2_1:inst1|inst5~70"
+            Info: Loc. = LCCOMB_X22_Y6_N10; Node "assign2_3:01|assign2_2:inst2|assign2_1:inst|inst5~28"
+        Info: 3: + IC(0.265 ns) + CELL(0.419 ns) = 3.227 ns; Loc. = LCCOMB_X22_Y6_N26; Fanout = 1; REG Node = 'ALU:inst|assign2_3:ALU-In_2|assign2_2:inst1|assign2_1:inst|inst5~55'
+        Info: Total cell delay = 2.962 ns ( 91.79 % )
+        Info: Total interconnect delay = 0.265 ns ( 8.21 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 148 warnings
+    Info: Allocated 108 megabytes of memory during processing
+    Info: Processing ended: Tue May 05 14:17:55 2009
+    Info: Elapsed time: 00:00:02
+
+

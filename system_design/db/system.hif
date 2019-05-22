@@ -1,0 +1,458 @@
+Version 7.1 Build 156 04/30/2007 SJ Web Edition
+11
+2401
+OFF
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Partition --
+-- End Partition --
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+assign2_3
+# storage
+db|system.(1).cnf
+db|system.(1).cnf
+# case_insensitive
+# source_file
+assign2_3.bdf
+6bd990b23f2c4a44396d12ba4e9fb656
+25
+# hierarchies {
+assign2_3:11
+readin_reg:inst1|assign2_3:P_Reg_10
+readin_reg:inst1|assign2_3:P_Reg_11
+readin_reg:inst1|assign2_3:P_Reg_00
+readin_reg:inst1|assign2_3:P_Reg_01
+assign2_3:inst2
+ALU:inst|assign2_3:ALU-Out
+ALU:inst|assign2_3:ALU-In_1
+ALU:inst|assign2_3:ALU-In_2
+assign2_3:10
+assign2_3:01
+}
+# lmf
+c:|program files|altera|71|quartus|lmf|
+d41d8cd98f0b24e980998ecf8427e
+# macro_sequence
+
+# end
+# entity
+assign2_2
+# storage
+db|system.(2).cnf
+db|system.(2).cnf
+# case_insensitive
+# source_file
+assign2_2.bdf
+dafe8a6c23a865c68cc40cec5295
+25
+# hierarchies {
+assign2_3:11|assign2_2:inst
+assign2_3:11|assign2_2:inst1
+assign2_3:11|assign2_2:inst2
+assign2_3:11|assign2_2:inst3
+readin_reg:inst1|assign2_3:P_Reg_10|assign2_2:inst
+readin_reg:inst1|assign2_3:P_Reg_10|assign2_2:inst1
+readin_reg:inst1|assign2_3:P_Reg_10|assign2_2:inst2
+readin_reg:inst1|assign2_3:P_Reg_10|assign2_2:inst3
+readin_reg:inst1|assign2_3:P_Reg_11|assign2_2:inst
+readin_reg:inst1|assign2_3:P_Reg_11|assign2_2:inst1
+readin_reg:inst1|assign2_3:P_Reg_11|assign2_2:inst2
+readin_reg:inst1|assign2_3:P_Reg_11|assign2_2:inst3
+readin_reg:inst1|assign2_3:P_Reg_00|assign2_2:inst
+readin_reg:inst1|assign2_3:P_Reg_00|assign2_2:inst1
+readin_reg:inst1|assign2_3:P_Reg_00|assign2_2:inst2
+readin_reg:inst1|assign2_3:P_Reg_00|assign2_2:inst3
+readin_reg:inst1|assign2_3:P_Reg_01|assign2_2:inst
+readin_reg:inst1|assign2_3:P_Reg_01|assign2_2:inst1
+readin_reg:inst1|assign2_3:P_Reg_01|assign2_2:inst2
+readin_reg:inst1|assign2_3:P_Reg_01|assign2_2:inst3
+assign2_3:inst2|assign2_2:inst
+assign2_3:inst2|assign2_2:inst1
+assign2_3:inst2|assign2_2:inst2
+assign2_3:inst2|assign2_2:inst3
+ALU:inst|assign2_3:ALU-Out|assign2_2:inst
+ALU:inst|assign2_3:ALU-Out|assign2_2:inst1
+ALU:inst|assign2_3:ALU-Out|assign2_2:inst2
+ALU:inst|assign2_3:ALU-Out|assign2_2:inst3
+ALU:inst|assign2_3:ALU-In_1|assign2_2:inst
+ALU:inst|assign2_3:ALU-In_1|assign2_2:inst1
+ALU:inst|assign2_3:ALU-In_1|assign2_2:inst2
+ALU:inst|assign2_3:ALU-In_1|assign2_2:inst3
+ALU:inst|assign2_3:ALU-In_2|assign2_2:inst
+ALU:inst|assign2_3:ALU-In_2|assign2_2:inst1
+ALU:inst|assign2_3:ALU-In_2|assign2_2:inst2
+ALU:inst|assign2_3:ALU-In_2|assign2_2:inst3
+assign2_3:10|assign2_2:inst
+assign2_3:10|assign2_2:inst1
+assign2_3:10|assign2_2:inst2
+assign2_3:10|assign2_2:inst3
+assign2_3:01|assign2_2:inst
+assign2_3:01|assign2_2:inst1
+assign2_3:01|assign2_2:inst2
+assign2_3:01|assign2_2:inst3
+}
+# lmf
+c:|program files|altera|71|quartus|lmf|
+d41d8cd98f0b24e980998ecf8427e
+# macro_sequence
+
+# end
+# entity
+assign2_1
+# storage
+db|system.(3).cnf
+db|system.(3).cnf
+# case_insensitive
+# source_file
+assign2_1.bdf
+4ad72f6143ad883166f7e5b5446041de
+25
+# hierarchies {
+assign2_3:11|assign2_2:inst|assign2_1:inst1
+assign2_3:11|assign2_2:inst|assign2_1:inst
+assign2_3:11|assign2_2:inst1|assign2_1:inst1
+assign2_3:11|assign2_2:inst1|assign2_1:inst
+assign2_3:11|assign2_2:inst2|assign2_1:inst1
+assign2_3:11|assign2_2:inst2|assign2_1:inst
+assign2_3:11|assign2_2:inst3|assign2_1:inst1
+assign2_3:11|assign2_2:inst3|assign2_1:inst
+readin_reg:inst1|assign2_3:P_Reg_10|assign2_2:inst|assign2_1:inst1
+readin_reg:inst1|assign2_3:P_Reg_10|assign2_2:inst|assign2_1:inst
+readin_reg:inst1|assign2_3:P_Reg_10|assign2_2:inst1|assign2_1:inst1
+readin_reg:inst1|assign2_3:P_Reg_10|assign2_2:inst1|assign2_1:inst
+readin_reg:inst1|assign2_3:P_Reg_10|assign2_2:inst2|assign2_1:inst1
+readin_reg:inst1|assign2_3:P_Reg_10|assign2_2:inst2|assign2_1:inst
+readin_reg:inst1|assign2_3:P_Reg_10|assign2_2:inst3|assign2_1:inst1
+readin_reg:inst1|assign2_3:P_Reg_10|assign2_2:inst3|assign2_1:inst
+readin_reg:inst1|assign2_3:P_Reg_11|assign2_2:inst|assign2_1:inst1
+readin_reg:inst1|assign2_3:P_Reg_11|assign2_2:inst|assign2_1:inst
+readin_reg:inst1|assign2_3:P_Reg_11|assign2_2:inst1|assign2_1:inst1
+readin_reg:inst1|assign2_3:P_Reg_11|assign2_2:inst1|assign2_1:inst
+readin_reg:inst1|assign2_3:P_Reg_11|assign2_2:inst2|assign2_1:inst1
+readin_reg:inst1|assign2_3:P_Reg_11|assign2_2:inst2|assign2_1:inst
+readin_reg:inst1|assign2_3:P_Reg_11|assign2_2:inst3|assign2_1:inst1
+readin_reg:inst1|assign2_3:P_Reg_11|assign2_2:inst3|assign2_1:inst
+readin_reg:inst1|assign2_3:P_Reg_00|assign2_2:inst|assign2_1:inst1
+readin_reg:inst1|assign2_3:P_Reg_00|assign2_2:inst|assign2_1:inst
+readin_reg:inst1|assign2_3:P_Reg_00|assign2_2:inst1|assign2_1:inst1
+readin_reg:inst1|assign2_3:P_Reg_00|assign2_2:inst1|assign2_1:inst
+readin_reg:inst1|assign2_3:P_Reg_00|assign2_2:inst2|assign2_1:inst1
+readin_reg:inst1|assign2_3:P_Reg_00|assign2_2:inst2|assign2_1:inst
+readin_reg:inst1|assign2_3:P_Reg_00|assign2_2:inst3|assign2_1:inst1
+readin_reg:inst1|assign2_3:P_Reg_00|assign2_2:inst3|assign2_1:inst
+readin_reg:inst1|assign2_3:P_Reg_01|assign2_2:inst|assign2_1:inst1
+readin_reg:inst1|assign2_3:P_Reg_01|assign2_2:inst|assign2_1:inst
+readin_reg:inst1|assign2_3:P_Reg_01|assign2_2:inst1|assign2_1:inst1
+readin_reg:inst1|assign2_3:P_Reg_01|assign2_2:inst1|assign2_1:inst
+readin_reg:inst1|assign2_3:P_Reg_01|assign2_2:inst2|assign2_1:inst1
+readin_reg:inst1|assign2_3:P_Reg_01|assign2_2:inst2|assign2_1:inst
+readin_reg:inst1|assign2_3:P_Reg_01|assign2_2:inst3|assign2_1:inst1
+readin_reg:inst1|assign2_3:P_Reg_01|assign2_2:inst3|assign2_1:inst
+assign2_3:inst2|assign2_2:inst|assign2_1:inst1
+assign2_3:inst2|assign2_2:inst|assign2_1:inst
+assign2_3:inst2|assign2_2:inst1|assign2_1:inst1
+assign2_3:inst2|assign2_2:inst1|assign2_1:inst
+assign2_3:inst2|assign2_2:inst2|assign2_1:inst1
+assign2_3:inst2|assign2_2:inst2|assign2_1:inst
+assign2_3:inst2|assign2_2:inst3|assign2_1:inst1
+assign2_3:inst2|assign2_2:inst3|assign2_1:inst
+ALU:inst|assign2_3:ALU-Out|assign2_2:inst|assign2_1:inst1
+ALU:inst|assign2_3:ALU-Out|assign2_2:inst|assign2_1:inst
+ALU:inst|assign2_3:ALU-Out|assign2_2:inst1|assign2_1:inst1
+ALU:inst|assign2_3:ALU-Out|assign2_2:inst1|assign2_1:inst
+ALU:inst|assign2_3:ALU-Out|assign2_2:inst2|assign2_1:inst1
+ALU:inst|assign2_3:ALU-Out|assign2_2:inst2|assign2_1:inst
+ALU:inst|assign2_3:ALU-Out|assign2_2:inst3|assign2_1:inst1
+ALU:inst|assign2_3:ALU-Out|assign2_2:inst3|assign2_1:inst
+ALU:inst|assign2_3:ALU-In_1|assign2_2:inst|assign2_1:inst1
+ALU:inst|assign2_3:ALU-In_1|assign2_2:inst|assign2_1:inst
+ALU:inst|assign2_3:ALU-In_1|assign2_2:inst1|assign2_1:inst1
+ALU:inst|assign2_3:ALU-In_1|assign2_2:inst1|assign2_1:inst
+ALU:inst|assign2_3:ALU-In_1|assign2_2:inst2|assign2_1:inst1
+ALU:inst|assign2_3:ALU-In_1|assign2_2:inst2|assign2_1:inst
+ALU:inst|assign2_3:ALU-In_1|assign2_2:inst3|assign2_1:inst1
+ALU:inst|assign2_3:ALU-In_1|assign2_2:inst3|assign2_1:inst
+ALU:inst|assign2_3:ALU-In_2|assign2_2:inst|assign2_1:inst1
+ALU:inst|assign2_3:ALU-In_2|assign2_2:inst|assign2_1:inst
+ALU:inst|assign2_3:ALU-In_2|assign2_2:inst1|assign2_1:inst1
+ALU:inst|assign2_3:ALU-In_2|assign2_2:inst1|assign2_1:inst
+ALU:inst|assign2_3:ALU-In_2|assign2_2:inst2|assign2_1:inst1
+ALU:inst|assign2_3:ALU-In_2|assign2_2:inst2|assign2_1:inst
+ALU:inst|assign2_3:ALU-In_2|assign2_2:inst3|assign2_1:inst1
+ALU:inst|assign2_3:ALU-In_2|assign2_2:inst3|assign2_1:inst
+assign2_3:10|assign2_2:inst|assign2_1:inst1
+assign2_3:10|assign2_2:inst|assign2_1:inst
+assign2_3:10|assign2_2:inst1|assign2_1:inst1
+assign2_3:10|assign2_2:inst1|assign2_1:inst
+assign2_3:10|assign2_2:inst2|assign2_1:inst1
+assign2_3:10|assign2_2:inst2|assign2_1:inst
+assign2_3:10|assign2_2:inst3|assign2_1:inst1
+assign2_3:10|assign2_2:inst3|assign2_1:inst
+assign2_3:01|assign2_2:inst|assign2_1:inst1
+assign2_3:01|assign2_2:inst|assign2_1:inst
+assign2_3:01|assign2_2:inst1|assign2_1:inst1
+assign2_3:01|assign2_2:inst1|assign2_1:inst
+assign2_3:01|assign2_2:inst2|assign2_1:inst1
+assign2_3:01|assign2_2:inst2|assign2_1:inst
+assign2_3:01|assign2_2:inst3|assign2_1:inst1
+assign2_3:01|assign2_2:inst3|assign2_1:inst
+}
+# lmf
+c:|program files|altera|71|quartus|lmf|
+d41d8cd98f0b24e980998ecf8427e
+# macro_sequence
+
+# end
+# entity
+readin_reg
+# storage
+db|system.(4).cnf
+db|system.(4).cnf
+# case_insensitive
+# source_file
+readin_reg.bdf
+2c1ecf861dca7d6c99982d592c1a26f4
+25
+# hierarchies {
+readin_reg:inst1
+}
+# lmf
+c:|program files|altera|71|quartus|lmf|
+d41d8cd98f0b24e980998ecf8427e
+# macro_sequence
+
+# end
+# entity
+MUX41
+# storage
+db|system.(5).cnf
+db|system.(5).cnf
+# case_insensitive
+# source_file
+c:|program files|altera|71|quartus|libraries|others|maxplus2|MUX41.bdf
+d7193e1c17cd49f17046e8139e73d6
+25
+# hierarchies {
+readin_reg:inst1|MUX41:MUX_Q0
+readin_reg:inst1|MUX41:MUX_Q1
+readin_reg:inst1|MUX41:MUX_Q2
+readin_reg:inst1|MUX41:MUX_Q3
+ALU:inst|MUX41:In0
+ALU:inst|MUX41:In1
+ALU:inst|MUX41:In2
+ALU:inst|MUX41:In3
+}
+# lmf
+c:|program files|altera|71|quartus|lmf|
+d41d8cd98f0b24e980998ecf8427e
+# macro_sequence
+
+# end
+# entity
+dec24
+# storage
+db|system.(6).cnf
+db|system.(6).cnf
+# case_insensitive
+# source_file
+dec24.bdf
+97c74424cd16ea6dbb698bf57ae2ee7
+25
+# hierarchies {
+readin_reg:inst1|dec24:inst8
+}
+# lmf
+c:|program files|altera|71|quartus|lmf|
+d41d8cd98f0b24e980998ecf8427e
+# macro_sequence
+
+# end
+# entity
+21mux
+# storage
+db|system.(7).cnf
+db|system.(7).cnf
+# case_insensitive
+# source_file
+c:|program files|altera|71|quartus|libraries|others|maxplus2|21mux.bdf
+58999bd3808c6118fcb8193d74b5b94f
+25
+# hierarchies {
+21mux:inst3
+ALU:inst|21mux:mux0
+ALU:inst|21mux:mux1
+ALU:inst|21mux:mux2
+ALU:inst|21mux:mux3
+21mux:inst4
+21mux:inst5
+21mux:inst6
+}
+# lmf
+c:|program files|altera|71|quartus|lmf|
+d41d8cd98f0b24e980998ecf8427e
+# macro_sequence
+
+# end
+# entity
+ALU
+# storage
+db|system.(8).cnf
+db|system.(8).cnf
+# case_insensitive
+# source_file
+ALU.bdf
+40638db4dd4d77a7329f87be67c66e
+25
+# hierarchies {
+ALU:inst
+}
+# lmf
+c:|program files|altera|71|quartus|lmf|
+d41d8cd98f0b24e980998ecf8427e
+# macro_sequence
+
+# end
+# entity
+74283
+# storage
+db|system.(9).cnf
+db|system.(9).cnf
+# case_insensitive
+# source_file
+c:|program files|altera|71|quartus|libraries|others|maxplus2|74283.tdf
+2211a54645ba55555e4f1cce9b95c8f
+6
+# user_parameter {
+DEVICE_FAMILY
+Cyclone II
+PARAMETER_UNKNOWN
+USR
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+}
+# used_port {
+SUM4
+-1
+3
+SUM3
+-1
+3
+SUM2
+-1
+3
+SUM1
+-1
+3
+COUT
+-1
+3
+CIN
+-1
+3
+B4
+-1
+3
+B3
+-1
+3
+B2
+-1
+3
+B1
+-1
+3
+A4
+-1
+3
+A3
+-1
+3
+A2
+-1
+3
+A1
+-1
+3
+}
+# include_file {
+c:|program files|altera|71|quartus|libraries|megafunctions|aglobal.inc
+80b63f71158cd1a01acf29ef94ccd6
+}
+# hierarchies {
+ALU:inst|74283:inst17
+}
+# lmf
+c:|program files|altera|71|quartus|lmf|
+d41d8cd98f0b24e980998ecf8427e
+# macro_sequence
+
+# end
+# entity
+f74283
+# storage
+db|system.(10).cnf
+db|system.(10).cnf
+# case_insensitive
+# source_file
+c:|program files|altera|71|quartus|libraries|others|maxplus2|f74283.bdf
+b45e4656835020a67cdadbd5db6856b
+25
+# hierarchies {
+ALU:inst|74283:inst17|f74283:sub
+}
+# lmf
+c:|program files|altera|71|quartus|lmf|
+d41d8cd98f0b24e980998ecf8427e
+# macro_sequence
+
+# end
+# entity
+system
+# storage
+db|system.(0).cnf
+db|system.(0).cnf
+# case_insensitive
+# source_file
+system.bdf
+91f0977c5c882443cd97b1602c39e055
+25
+# hierarchies {
+|
+}
+# lmf
+c:|program files|altera|71|quartus|lmf|
+d41d8cd98f0b24e980998ecf8427e
+# macro_sequence
+
+# end
+# complete
+

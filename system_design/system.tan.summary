@@ -1,0 +1,66 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 11.234 ns
+From           : opcode0
+To             : ALU:inst|assign2_3:ALU-Out|assign2_2:inst|assign2_1:inst1|inst5~20
+From Clock     : --
+To Clock       : Clock
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 11.554 ns
+From           : assign2_3:inst2|assign2_2:inst|assign2_1:inst1|inst5~20
+To             : Output0
+From Clock     : Clock
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case tpd
+Slack          : N/A
+Required Time  : None
+Actual Time    : 16.085 ns
+From           : opcode0
+To             : Output0
+From Clock     : --
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : -0.874 ns
+From           : Clock
+To             : ALU:inst|assign2_3:ALU-In_2|assign2_2:inst1|assign2_1:inst|inst5~55
+From Clock     : --
+To Clock       : Clock
+Failed Paths   : 0
+
+Type           : Clock Setup: 'Clock'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 70.22 MHz ( period = 14.240 ns )
+From           : assign2_3:inst2|assign2_2:inst1|assign2_1:inst1|inst5~20
+To             : ALU:inst|assign2_3:ALU-In_1|assign2_2:inst2|assign2_1:inst|inst5~8
+From Clock     : Clock
+To Clock       : Clock
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+
